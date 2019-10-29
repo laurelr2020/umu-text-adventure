@@ -6,6 +6,7 @@ def is_purple_raider():
 def rules():
     print("\nOkay, let's get the ground rules out of the way first.")
     print("If you get asked a 'yes' or 'no' question, answer with 'yes' or 'no'.")
+
     understands = input("Get it? > ")
 
     if(understands.lower() == 'yes'):
@@ -13,7 +14,9 @@ def rules():
     elif(understands.lower() == 'no'):
         print("Okay, I'll go over this one more time.")
         print("If a question can be answered with 'yes' or 'no', you must answer by typing 'yes' or no'.")
+
         understands = input("Get it? > ")
+
         if(understands.lower() == 'yes'):
             print("Good! Let's get started!")
         else: 
