@@ -1,15 +1,14 @@
 import sys
 
 def campus_intro():
-    print("\nWell, that's not a problem. Let me tell you about this place.")
-    print("We use a lot of acronyms here at Mount Union so let me break it down for you.")
+    print("\nWell, that's not a problem. Let me tell you about this place." +
+            " We use a lot of acronyms here at Mount Union so let me break it down for you.")
     print("EBB --> This is the Enginnering and Business Building. It houses the Engineering Department and the Business Department (creative, eh?).\n")
     print("T&H --> This building houses some brand new engineering labs on the first floor and the Psychology department on the second floor.\n")
     print("KHIC --> This building is lots of thing and it can get confusing so be careful not to get lost. " + 
             "This building houses some classrooms for all kinds of different classes. " +
             "It also houses the Foreign Languages Department, the Math Department, the Computer Science Department. " + 
             "Inside of it you will find the library along with lots of neat places to study. ")
-
 
 def is_purple_raider():
     purple_raider = input("Do you attend the University of Mount Union? > ")
