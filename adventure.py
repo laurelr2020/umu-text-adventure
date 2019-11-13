@@ -1,4 +1,5 @@
 import sys
+from ebb import enter_campus
 
 def campus_intro():
     print("\nWell, that's not a problem. Let me tell you about this place." +
@@ -56,6 +57,7 @@ def main():
     welcome()
     rules()
     is_purple_raider()
+    enter_campus()
 
 if __name__ == '__main__':
     main()
