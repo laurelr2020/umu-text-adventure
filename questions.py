@@ -50,3 +50,16 @@ class business_questions():
             "    C) Delivering products\n"
             "    D) Firing employees"
         )
+
+        correct_answer = "d"
+        marketing_answer = input("Your answer > ")
+        marketing_answer.replace(")", "")
+
+        if(marketing_answer.lower() == correct_answer):
+            business_degree = {'marketing' : "A+"}
+        else:
+            business_degree = {'marketing' : "F"}
+        print("Grade: " + business_degree['marketing'])
+
+
+    
