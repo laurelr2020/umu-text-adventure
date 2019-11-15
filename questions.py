@@ -1,6 +1,6 @@
-
 class business_questions():
     business_degree = {}
+    earned_degree = False
 
     @staticmethod
     def finance():
@@ -60,6 +60,24 @@ class business_questions():
         else:
             business_degree = {'marketing' : "F"}
         print("Grade: " + business_degree['marketing'])
+        print(business_degree)
+
+    @staticmethod
+    def graduation():
+        print("Let's look at how you did.")
+        for course, grade in business_degree.items():
+            print(f"course: {course} grade: {grade}\n")
+
+        earned_degree = all(value == 'A+' for value in business_degree.values())
+
+        if(earned_degree):
+            print("CONGRATULATIONS!!! You have earned business degree!!!!")
+        else:
+            print("I am sorry, but we are unable to award you a degree in business. Please feel free to take the courses again.")
 
 
-    
+def quiz_user(self):
+    business_questions.finance()
+    business_questions.management()
+    business_questions.marketing()
+    business_questions.graduation()
