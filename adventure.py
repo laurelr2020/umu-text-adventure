@@ -26,11 +26,11 @@ def campus_intro():
             "Inside of it you will find the library along with lots of neat places to study. ")
 
 def is_purple_raider():
-    purple_raider = input("Do you attend the University of Mount Union? > ")
+    player.purple_raider = input("Do you attend the University of Mount Union? > ")
 
-    if(purple_raider == 'yes'):
-        knows_campus = input("Great!! Then you are familiar with the campus, yes? > ")
-        if(knows_campus == 'yes'):
+    if(player.purple_raider):
+        knows_campus = input("Great!! Are familiar with the campus? > ")
+        if(knows_campus.lower() == 'yes'):
             print("Fantastic!! Let's get started!!")
         else:
             campus_intro()
@@ -60,9 +60,8 @@ def rules():
         print("If you can't understand these simple rules, you wont be able to play the game.")
         sys.exit()
 
-
+player = User() 
 def main():
-    player = User()
 
     player.name = input("What's your name? > ")
     print(f"Hello {player.name}, Let's begin our adventure")
