@@ -20,7 +20,7 @@ def enter_bus_dept():
     business_questions.finance()
     business_questions.management()
     business_questions.marketing()
-    business_questions.graduation()
+    return
 
 def ebb_second_floor():
     print("You're on the second floor")
