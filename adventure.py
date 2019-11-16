@@ -1,4 +1,5 @@
 import sys
+from user import User
 from ebb import enter_ebb_south
 from academic_mall import enter_academic_mall
 
@@ -59,15 +60,13 @@ def rules():
         print("If you can't understand these simple rules, you wont be able to play the game.")
         sys.exit()
 
-def get_player_name():
-    return input("What's your name? > ")
-
-def welcome():
-    player_name = get_player_name()
-    print(f"Hello {player_name}, Let's begin our adventure")
 
 def main():
-    welcome()
+    player = User()
+
+    player.name = input("What's your name? > ")
+    print(f"Hello {player.name}, Let's begin our adventure")
+
     rules()
     is_purple_raider()
     enter_campus()
