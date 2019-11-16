@@ -17,3 +17,12 @@ class User():
     @purple_raider.setter
     def purple_raider(self, attend_umu):
         self._purple_raider = bool('yes' in attend_umu.lower())
+
+    @property
+    def business_grades(self):
+        '''Grades received on business questions in EBB'''
+        return self._business_grades
+    
+    @business_grades.setter
+    def business_grades(self, grades_dict):
+        self._business_grades = grades_dict

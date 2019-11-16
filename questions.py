@@ -20,7 +20,6 @@ def business_questions():
     else:
         business_degree['finance'] = 'F'
     print("Grade: " + business_degree['finance'])
-
     
     print("Mangement: What is mangagement?\n" +
         "    A) the process of designing, launching and running a new business, which is often initially a small business.\n" +
@@ -56,15 +55,17 @@ def business_questions():
         business_degree['marketing'] = 'F'
     print("Grade: " + business_degree['marketing'])
 
-@staticmethod
-def graduation():
-    print("Let's look at how you did.")
-    for course, grade in business_degree.items():
-        print(f"course: {course} grade: {grade}\n")
+    player.business_grades = business_degree
 
-    earned_degree = all(value == 'A+' for value in business_degree.values())
+# @staticmethod
+# def graduation():
+#     print("Let's look at how you did.")
+#     for course, grade in business_degree.items():
+#         print(f"course: {course} grade: {grade}\n")
 
-    if(earned_degree):
-        print("CONGRATULATIONS!!! You have earned business degree!!!!")
-    else:
-        print("I am sorry, but we are unable to award you a degree in business. Please feel free to take the courses again.")
+#     earned_degree = all(value == 'A+' for value in business_degree.values())
+
+#     if(earned_degree):
+#         print("CONGRATULATIONS!!! You have earned business degree!!!!")
+#     else:
+#         print("I am sorry, but we are unable to award you a degree in business. Please feel free to take the courses again.")
