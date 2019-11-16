@@ -74,10 +74,3 @@ class business_questions():
             print("CONGRATULATIONS!!! You have earned business degree!!!!")
         else:
             print("I am sorry, but we are unable to award you a degree in business. Please feel free to take the courses again.")
-
-
-def quiz_user(self):
-    business_questions.finance()
-    business_questions.management()
-    business_questions.marketing()
-    business_questions.graduation()

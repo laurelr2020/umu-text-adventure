@@ -1,5 +1,5 @@
 import sys
-from questions import quiz_user
+from questions import business_questions
 
 def enter_ebb_south():
     print("Welcome to EBB! \nChoose where you want to go:" )
@@ -17,7 +17,10 @@ def enter_bus_dept():
     print("Welcome to the Business Department!\n" +
         "Answer the following questions to get your business degree:\n\n")
     
-    quiz_user();
+    business_questions.finance()
+    business_questions.management()
+    business_questions.marketing()
+    business_questions.graduation()
 
 def ebb_second_floor():
     print("You're on the second floor")
