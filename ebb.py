@@ -20,7 +20,26 @@ def enter_bus_dept():
     business_questions.finance()
     business_questions.management()
     business_questions.marketing()
-    return
+    
+    exit_bus_dept()
+
+def exit_bus_dept():
+    print('You are exiting the Business Department.\n')
+    print('Where to next? Engineering Department, Upstairs or Exit EBB\n')
+    choice = input('Engineering, Upstairs, or Exit > ').lower()
+    
+    if('eng' in choice):
+        enter_engineering_dept()
+    elif('up' in choice):
+        ebb_second_floor()
+    else:
+        exit_ebb()
+
+def enter_engineering_dept():
+    print('Welcome to the Engineering Department!\n' +
+        'Answer the following questions to get your Engineering Degree:\n\n'
+    )
+    
 
 def ebb_second_floor():
     print("You're on the second floor")
