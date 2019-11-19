@@ -1,5 +1,5 @@
 import sys
-from user import User
+from config import player
 from ebb import enter_ebb_south
 from academic_mall import enter_academic_mall
 
@@ -60,9 +60,7 @@ def rules():
         print("If you can't understand these simple rules, you wont be able to play the game.")
         sys.exit()
 
-player = User() 
 def main():
-
     player.name = input("What's your name? > ")
     print(f"Hello {player.name}, Let's begin our adventure")
 
