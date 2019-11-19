@@ -58,7 +58,6 @@ def business_questions():
     print("Grade: " + business_degree['marketing'])
     
     player.business_grades = business_degree
-    print(player.business_grades)
 
 # @staticmethod
 # def graduation():
