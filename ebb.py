@@ -16,11 +16,7 @@ def enter_ebb_south():
 def enter_bus_dept():
     print("Welcome to the Business Department!\n" +
         "Answer the following questions to get your business degree:\n\n")
-    
-    business_questions.finance()
-    business_questions.management()
-    business_questions.marketing()
-    
+    business_questions()    
     exit_bus_dept()
 
 def exit_bus_dept():
@@ -39,7 +35,6 @@ def enter_engineering_dept():
     print('Welcome to the Engineering Department!\n' +
         'Answer the following questions to get your Engineering Degree:\n\n'
     )
-    
 
 def ebb_second_floor():
     print("You're on the second floor")
