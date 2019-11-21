@@ -26,3 +26,12 @@ class User():
     @business_grades.setter
     def business_grades(self, grades_dict):
         self._business_grades = grades_dict
+
+    @property
+    def engineering_grades(self):
+        '''Grades received on engineering questions in EBB'''
+        return self._engineering_grades
+
+    @engineering_grades.setter
+    def engineering_grades(self, grades_dict):
+        self._engineering_grades = grades_dict
