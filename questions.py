@@ -73,18 +73,17 @@ def business_questions():
 #         print("I am sorry, but we are unable to award you a degree in business. Please feel free to take the courses again.")
 
 
-def engineering_questions(self):
+def engineering_questions():
     engineering_grades = {
         'civil': '',
         'computer': '',
         'mechanical': '',
     }
-
     print('Civil Engineering: What is civil engineering?\n' +
-        '    A) the process and the product of planning, designing, and constructing buildings or any other structures\n'+
-        '    B) a professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment\n'+
-        '    C) the use of computers to store, retrieve, transmit, and manipulate data, or information\n'+
-        '    D) personal guarantees and freedoms that the government cannot abridge, either by law or by judicial interpretation, without due process\n'
+    '    A) the process and the product of planning, designing, and constructing buildings or any other structures\n' + 
+    '    B) a professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment\n' +
+    '    C) the use of computers to store, retrieve, transmit, and manipulate data, or information\n' +
+    '    D) personal guarantees and freedoms that the government cannot abridge, either by law or by judicial interpretation, without due process\n'
     )
 
     civil_correct_answer = 'b'
@@ -94,6 +93,8 @@ def engineering_questions(self):
         engineering_grades['civil'] = 'A+'
     else:
         engineering_grades['civil'] = 'F'
+
+    print("Grade: " + engineering_grades['civil'])
 
     print('Computer Engineering: what is computer engineering?\n' +
         '    A)  the knowledge and ability to utilize computers and related technology efficiently\n' +
@@ -109,11 +110,13 @@ def engineering_questions(self):
     else:
         engineering_grades['computer'] = 'F'
 
+    print("Grade: " + engineering_grades['computer'])
 
     print('Mechanical Engineering: what is mechanical engineering?\n' +
         '    A)  a measure of the force amplification achieved by using a tool,\n' +
         '    B)  the sum of potential energy and kinetic energy.\n' +
-        '    C)  the discipline that applies engineering physics, engineering mathematics, and materials science principles to design, analyze, manufacture, and maintain mechanical systems\n' +
+        '    C)  the discipline that applies engineering physics, engineering mathematics, and materials science principles to design, analyze, manufacture, \n' + 
+        '    and maintain mechanical systems\n' +
         '    D)  an artisan, skilled tradesperson, or technician who uses tools to build, maintain, or repair machinery\n'
     )
 
@@ -125,3 +128,6 @@ def engineering_questions(self):
     else:
         engineering_grades['mechanical'] = 'F'
 
+    print("Grade: " + engineering_grades['mechanical'])
+
+    player.engineering_grades = engineering_grades
