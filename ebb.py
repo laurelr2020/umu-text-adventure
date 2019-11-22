@@ -15,6 +15,17 @@ def enter_ebb_south():
         print("You didn't enter a valid option. Bye, Bye.")
         sys.exit()
 
+def exit_ebb_south():
+    print('You have exited EBB. Where would you like to go: EBB or Academic Mall?')
+    choice = input('EBB or Academic Mall > ').lower()
+
+    if(choice == 'ebb'):
+        enter_ebb_south()
+    elif('acad' in choice):
+        enter_academic_mall()
+    else:
+        sys.exit()
+
 def enter_bus_dept():
     print("Welcome to the Business Department!\n" +
         "Answer the following questions to get your business degree:\n\n")
@@ -31,18 +42,7 @@ def exit_bus_dept():
     elif('up' in choice):
         ebb_second_floor()
     else:
-        exit_ebb()
-
-def exit_ebb():
-    print('You have exited EBB. Where would you like to go: EBB or Academic Mall?')
-    choice = input('EBB or Academic Mall > ').lower()
-
-    if(choice == 'ebb'):
-        enter_ebb_south()
-    elif('acad' in choice):
-        enter_academic_mall()
-    else:
-        sys.exit()
+        exit_ebb_south()
 
 def enter_engineering_dept():
     print('Welcome to the Engineering Department!\n' +
