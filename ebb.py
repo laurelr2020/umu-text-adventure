@@ -10,7 +10,7 @@ def enter_ebb_south():
     if('bus' in choice.lower()):
         enter_bus_dept()
     elif('up' in choice.lower()):
-        ebb_second_floor()
+        ebb_second_floor_south()
     else:
         enter_ebb_south()
 
@@ -44,7 +44,26 @@ def exit_ebb_west():
     else:
         exit_ebb_west()
 
-def ebb_second_floor():
+def ebb_second_floor_north():
+    print('You are on the second floor\n' + 
+    'Where would you like to go? EBB Lounge, Computer Lab, Down the Hallway, or Downstairs?')
+    choice = input('Lounge, Lab, Hallway or Downstairs > ').lower()
+
+    if('lounge' in choice):
+        enter_ebb_lounge()
+    elif('lab' in choice):
+        enter_ebb_computer_lab()
+    elif('hall' in choice):
+        ebb_second_floor_south()
+    elif('down' in choice):
+        ebb_first_floor_south()
+    else:
+        ebb_second_floor_south()
+
+def ebb_first_floor_south():
+    print('You are in the lobby of EBB')
+
+def ebb_second_floor_south():
     print('You are on the second floor')
 
 def enter_bus_dept():
@@ -61,7 +80,7 @@ def exit_bus_dept():
     if('eng' in choice):
         enter_engineering_dept()
     elif('up' in choice):
-        ebb_second_floor()
+        ebb_second_floor_south()
     else:
         exit_ebb_south()
 
@@ -80,8 +99,14 @@ def exit_engineering_dept():
     if('bus' in choice):
         enter_bus_dept()
     elif('up' in choice):
-        ebb_second_floor()
+        ebb_second_floor_north()
     elif('exit' in choice):
         exit_ebb_west()
     else:
         exit_engineering_dept()
+
+def enter_ebb_computer_lab():
+    print('You are in the EBB Computer Lab')
+
+def enter_ebb_lounge():
+    print('You are in the EBB Lounge')
