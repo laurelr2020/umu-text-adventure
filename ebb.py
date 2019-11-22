@@ -1,7 +1,7 @@
 import sys
-from questions import business_questions
-from questions import engineering_questions
-from academic_mall import enter_academic_mall
+from khic import enter_khic_north, enter_khic_east
+from questions import business_questions, engineering_questions
+from academic_mall import enter_academic_mall, exit_academic_mall
 
 def enter_ebb_south():
     print('Welcome to EBB! \nChoose where you want to go:' )
@@ -25,6 +25,9 @@ def exit_ebb_south():
     else:
         exit_ebb_south()
 
+def enter_ebb_west():
+    print('You are now in EBB. Where you would like to go? Engineering Department, Upstairs, Exit EBB.')
+
 def exit_ebb_west():
     print('You have exited EBB. You are now in the Academic Mall.\n' +
     'Where would you like to go? EBB, KHIC North, KHIC West or South.')
@@ -35,11 +38,14 @@ def exit_ebb_west():
     elif('north' in choice):
         enter_khic_north()
     elif('west' in choice):
-        enter_khic_west()
+        enter_khic_east()
     elif('south' in choice):
         exit_academic_mall()
     else:
         exit_ebb_west()
+
+def ebb_second_floor():
+    print('You are on the second floor')
 
 def enter_bus_dept():
     print('Welcome to the Business Department!\n' +
@@ -79,6 +85,3 @@ def exit_engineering_dept():
         exit_ebb_west()
     else:
         exit_engineering_dept()
-
-def ebb_second_floor():
-    print('You are on the second floor')
