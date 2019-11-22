@@ -71,3 +71,63 @@ def business_questions():
 #         print("CONGRATULATIONS!!! You have earned business degree!!!!")
 #     else:
 #         print("I am sorry, but we are unable to award you a degree in business. Please feel free to take the courses again.")
+
+
+def engineering_questions():
+    engineering_grades = {
+        'civil': '',
+        'computer': '',
+        'mechanical': '',
+    }
+    print('Civil Engineering: What is civil engineering?\n' +
+    '    A) the process and the product of planning, designing, and constructing buildings or any other structures\n' + 
+    '    B) a professional engineering discipline that deals with the design, construction, and maintenance of the physical and naturally built environment\n' +
+    '    C) the use of computers to store, retrieve, transmit, and manipulate data, or information\n' +
+    '    D) personal guarantees and freedoms that the government cannot abridge, either by law or by judicial interpretation, without due process\n'
+    )
+
+    civil_correct_answer = 'b'
+    civil_answer = input("Your answer > ").replace(")", "")
+
+    if(civil_answer.lower() == civil_correct_answer):
+        engineering_grades['civil'] = 'A+'
+    else:
+        engineering_grades['civil'] = 'F'
+
+    print("Grade: " + engineering_grades['civil'])
+
+    print('Computer Engineering: what is computer engineering?\n' +
+        '    A)  the knowledge and ability to utilize computers and related technology efficiently\n' +
+        '    B)  a machine that can be instructed to carry out sequences of arithmetic or logical operations automatically via computer programming.\n' +
+        '    C)  a branch of engineering that integrates several fields of computer science and electronic engineering required to develop computer hardware and software\n' +
+        '    D)  a branch of digital forensic science pertaining to evidence found in computers and digital storage media\n'
+    )
+    computer_correct_answer = 'c'
+    computer_answer = input("Your answer > ").replace(")", "")
+
+    if(computer_answer.lower() == computer_correct_answer):
+        engineering_grades['computer'] = 'A+'
+    else:
+        engineering_grades['computer'] = 'F'
+
+    print("Grade: " + engineering_grades['computer'])
+
+    print('Mechanical Engineering: what is mechanical engineering?\n' +
+        '    A)  a measure of the force amplification achieved by using a tool,\n' +
+        '    B)  the sum of potential energy and kinetic energy.\n' +
+        '    C)  the discipline that applies engineering physics, engineering mathematics, and materials science principles to design, analyze, manufacture, \n' + 
+        '    and maintain mechanical systems\n' +
+        '    D)  an artisan, skilled tradesperson, or technician who uses tools to build, maintain, or repair machinery\n'
+    )
+
+    mechanical_correct_answer = 'c'
+    mechanical_answer = input("Your answer > ").replace(")", "")
+
+    if(mechanical_answer.lower() == mechanical_correct_answer):
+        engineering_grades['mechanical'] = 'A+'
+    else:
+        engineering_grades['mechanical'] = 'F'
+
+    print("Grade: " + engineering_grades['mechanical'])
+
+    player.engineering_grades = engineering_grades
