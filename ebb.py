@@ -4,15 +4,15 @@ from questions import engineering_questions
 from academic_mall import enter_academic_mall
 
 def enter_ebb_south():
-    print("Welcome to EBB! \nChoose where you want to go:" )
-    choice = input("Business Department or Upstairs > ")
+    print('Welcome to EBB! \nChoose where you want to go:' )
+    choice = input('Business Department or Upstairs > ')
 
-    if("bus" in choice.lower()):
+    if('bus' in choice.lower()):
         enter_bus_dept()
-    elif("up" in choice.lower()):
+    elif('up' in choice.lower()):
         ebb_second_floor()
     else:
-        print("You didn't enter a valid option. Bye, Bye.")
+        print('You did not enter a valid option. Bye, Bye.')
         sys.exit()
 
 def exit_ebb_south():
@@ -27,8 +27,8 @@ def exit_ebb_south():
         sys.exit()
 
 def enter_bus_dept():
-    print("Welcome to the Business Department!\n" +
-        "Answer the following questions to get your business degree:\n\n")
+    print('Welcome to the Business Department!\n' +
+        'Answer the following questions to get your business degree:\n\n')
     business_questions()    
     exit_bus_dept()
 
@@ -52,7 +52,7 @@ def enter_engineering_dept():
     exit_engineering_dept()
 
 def exit_engineering_dept():
-    
+
 
 def ebb_second_floor():
-    print("You're on the second floor")
+    print('You are on the second floor')
