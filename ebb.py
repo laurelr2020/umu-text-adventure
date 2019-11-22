@@ -49,6 +49,10 @@ def enter_engineering_dept():
         'Answer the following questions to get your Engineering Degree:\n\n'
     )
     engineering_questions()
+    exit_engineering_dept()
+
+def exit_engineering_dept():
+    
 
 def ebb_second_floor():
     print("You're on the second floor")
