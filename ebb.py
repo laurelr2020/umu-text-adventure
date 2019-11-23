@@ -27,6 +27,17 @@ def exit_ebb_south():
 
 def enter_ebb_west():
     print('You are now in EBB. Where you would like to go? Engineering Department, Upstairs, Exit EBB.')
+    choice = input('Engineering, Upstairs, or Exit > ').lower()
+
+    if('eng' in choice):
+        enter_engineering_dept()
+    elif('up' in choice):
+        ebb_second_floor_north()
+    elif('exit' in choice):
+        exit_ebb_west()
+    else:
+        enter_ebb_west()
+
 
 def exit_ebb_west():
     print('You have exited EBB. You are now in the Academic Mall.\n' +
