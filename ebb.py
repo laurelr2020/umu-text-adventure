@@ -117,7 +117,13 @@ def exit_engineering_dept():
         exit_engineering_dept()
 
 def enter_ebb_computer_lab():
-    print('You are in the EBB Computer Lab')
+    print('You are in the EBB Computer Lab.')
+    choice = input('Wanna hear a riddle? > ').lower()
+
+    if('yes' in choice):
+        print('riddle')
+    else:
+        ebb_second_floor_south()
 
 def enter_ebb_lounge():
     print('You are in the EBB Lounge')
