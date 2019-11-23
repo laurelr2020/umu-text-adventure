@@ -1,5 +1,7 @@
 import sys
+from config import computer_riddles_completed
 from khic import enter_khic_north, enter_khic_east
+from riddles import ebb_computer_lab_riddles, get_riddle
 from questions import business_questions, engineering_questions
 from academic_mall import enter_academic_mall, exit_academic_mall
 
@@ -121,9 +123,16 @@ def enter_ebb_computer_lab():
     choice = input('Wanna hear a riddle? > ').lower()
 
     if('yes' in choice):
-        print('riddle')
+        riddles = ebb_computer_lab_riddles()
+        if((len(riddles) - computer_riddles_completed) < len(riddles)):
+            riddle = get_riddle(riddles, len(riddles))
+            print(riddle['riddle'])
+        exit_ebb_computer_lab()
     else:
         ebb_second_floor_south()
+
+def exit_ebb_computer_lab():
+    print('You are in the hallway')
 
 def enter_ebb_lounge():
     print('You are in the EBB Lounge')
