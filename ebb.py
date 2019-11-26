@@ -154,6 +154,7 @@ def enter_ebb_computer_lab():
 
 def tell_riddle(riddles, riddle):
     print('\n' + riddle['riddle'])
+    time.sleep(5)
     print(riddle['answer'] + '\n')
     player.computer_riddles_completed += 1
     return
