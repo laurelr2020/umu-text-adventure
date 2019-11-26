@@ -155,12 +155,21 @@ def enter_ebb_computer_lab():
 def tell_riddle(riddles, riddle):
     print('\n' + riddle['riddle'])
     print(riddle['answer'] + '\n')
-    
     player.computer_riddles_completed += 1
     return
 
 def exit_ebb_computer_lab():
-    print('You are in the hallway')
+    print('You are in the hallway. Where would you like to go next? EBB Lounge, Downstairs, or Down the Hallway?')
+    choice = input('Lounge, Downstairs, or Hallway > ')
+
+    if('lounge' in choice):
+        enter_ebb_lounge()
+    elif('hall' in choice):
+        ebb_second_floor_north()
+    elif('down' in choice):
+        ebb_first_floor_south()
+    else:
+        exit_ebb_computer_lab()
 
 def enter_ebb_lounge():
     print('You are in the EBB Lounge')
