@@ -1,5 +1,5 @@
 import sys
-from config import computer_riddles_completed
+from config import player
 from khic import enter_khic_north, enter_khic_east
 from riddles import ebb_computer_lab_riddles, get_riddle
 from questions import business_questions, engineering_questions
@@ -133,12 +133,31 @@ def enter_ebb_computer_lab():
 
     if('yes' in choice):
         riddles = ebb_computer_lab_riddles()
-        if((len(riddles) - computer_riddles_completed) < len(riddles)):
-            riddle = get_riddle(riddles, len(riddles))
-            print(riddle['riddle'])
+        riddle = get_riddle(riddles, len(riddles))
+        tell_riddle(riddles, riddle)
+        riddles.remove(riddle)
+
+        while(len(riddles) > 0):
+            choice = input('Do you want to hear another one? > ')
+            if('yes' in choice):
+                riddle = get_riddle(riddles, len(riddles))
+                tell_riddle(riddles, riddle)
+                riddles.remove(riddle)
+            else:
+                break
+        
+        player.computer_riddles_completed = 0
+        print('That is all the riddles for now. Continue with your adventure.')
         exit_ebb_computer_lab()
     else:
         ebb_second_floor_south()
+
+def tell_riddle(riddles, riddle):
+    print('\n' + riddle['riddle'])
+    print(riddle['answer'] + '\n')
+    
+    player.computer_riddles_completed += 1
+    return
 
 def exit_ebb_computer_lab():
     print('You are in the hallway')

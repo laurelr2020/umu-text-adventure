@@ -1,5 +1,8 @@
 
 class User():
+    def __init__(self):
+        self.computer_riddles_completed = 0;
+
     @property
     def name(self):
         '''Name of current player'''
@@ -35,3 +38,12 @@ class User():
     @engineering_grades.setter
     def engineering_grades(self, grades_dict):
         self._engineering_grades = grades_dict
+
+    # @property
+    # def computer_riddles_completed(self):
+    #     '''Number of riddles completed in the EBB computer lab'''
+    #     return self._computer_riddles_completed
+
+    # @computer_riddles_completed.setter
+    # def computer_riddles_completed(self):
+    #     self._computer_riddles_completed += 1
