@@ -1,4 +1,4 @@
-import sys
+import sys, time
 from config import player
 from khic import enter_khic_north, enter_khic_east
 from riddles import ebb_computer_lab_riddles, get_riddle
@@ -172,4 +172,21 @@ def exit_ebb_computer_lab():
         exit_ebb_computer_lab()
 
 def enter_ebb_lounge():
-    print('You are in the EBB Lounge')
+    print('You are in the EBB Lounge.\n\n' + 
+            'This is the EBB Lounge. To your right you will see a beautiful view of the campus quad.\n' + 
+            'This is a fabulous study spot as there is comfortable seating and also some table to sit at to do study.\n')
+    time.sleep(5)
+    exit_ebb_lounge()
+
+def exit_ebb_lounge():
+    print('You are in the hallway. Where would you like to go next? EBB Computer Lab, Downstairs, or Down the Hallway?')
+    choice = input('Lab, Downstairs, or Hallway > ')
+
+    if('lab' in choice):
+        enter_ebb_computer_lab()
+    elif('hall' in choice):
+        ebb_second_floor_north()
+    elif('down' in choice):
+        ebb_first_floor_south()
+    else:
+        exit_ebb_lounge()
