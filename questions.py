@@ -131,3 +131,20 @@ def engineering_questions():
     print("Grade: " + engineering_grades['mechanical'])
 
     player.engineering_grades = engineering_grades
+
+def psychology_questions():
+    psych_degree = {
+        'cognitive' : '',
+        'behavioral': '',
+        'forensic' : ''
+    }
+
+    print('Cognitive Psychology: What is cognitive psychology?\n' + 
+        '    A) an approach to psychology that emphasizes internal mental processes\n' +
+        '    B) the branch of psychology concerned with the treatment of abnormal mentation and behavior\n' +
+        '    C) the branch of psychology that studies the social and mental development of children\n' + 
+        '    D) the psychological result of perception and reasoning'
+    )
+    
+    cognitive_correct_answer = 'A'
+    cognitive_answer = input("Your answer > ").replace(")", "")
