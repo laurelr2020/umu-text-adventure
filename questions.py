@@ -183,3 +183,5 @@ def psychology_questions():
         psych_grades['forensic'] = 'A+'
     else:
         psych_grades['forensic'] = 'F'
+
+    player.psych_grades = psych_grades

@@ -39,6 +39,15 @@ class User():
     def engineering_grades(self, grades_dict):
         self._engineering_grades = grades_dict
 
+    @property
+    def engineering_grades(self):
+        '''Grades received on psychology questions in EBB'''
+        return self._psychology_grades
+
+    @psychology_grades.setter
+    def psychology_grades(self, grades_dict):
+        self._psychology_grades = grades_dict
+
     # @property
     # def computer_riddles_completed(self):
     #     '''Number of riddles completed in the EBB computer lab'''
