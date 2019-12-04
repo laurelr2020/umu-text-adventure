@@ -133,7 +133,7 @@ def engineering_questions():
     player.engineering_grades = engineering_grades
 
 def psychology_questions():
-    psych_degree = {
+    psych_grades = {
         'cognitive' : '',
         'behavioral': '',
         'forensic' : ''
@@ -148,3 +148,38 @@ def psychology_questions():
     
     cognitive_correct_answer = 'A'
     cognitive_answer = input('Your answer > ').replace(')', '')
+
+    if(cognitive_answer.lower() == cognitive_correct_answer):
+        psych_grades['cognitive'] = 'A+'
+    else:
+        psych_grades['cognitive'] = 'F'
+
+    print('Behavioral Psychology: What is behaviourism\n' + 
+        '    A) the aggregate of the responses made by an organism\n' +
+        '    B) the interrelation of conscious and unconscious processes and emotions that determine personality and motivation\n' +
+        '    C) the branch of social psychology that studies the psychodynamics of interaction in social groups\n' +
+        '    D) an approach to psychology that emphasizes observable measurable behavior'
+    )
+
+    behavioral_correct_answer = 'D'
+    behavioral_answer = input('Your answer > ').replace(')', '')
+    
+    if(behavioral_answer.lower() == behavioral_correct_answer):
+        psych_grades['behavioral'] = 'A+'
+    else:
+        psych_grades['behavioral'] = 'F'
+
+    print('Forensic Psychology: What is forensic psychology\n' + 
+        '    A) the branch of psychology concerned with abnormal behavior\n' +
+        '    B) the intersection between the study of psychology and the justice system\n' +
+        '    C) the branch of psychology that is concerned with the physiological bases of psychological processes\n' +
+        '    D) the branch of psychology that studies persons and their relationships with others and with groups and with society as a whole'
+    )
+
+    forensic_correct_answer = 'B'
+    forensic_answer = input('Your answer > ').replace(')', '')
+    
+    if(forensic_answer.lower() == forensic_correct_answer):
+        psych_grades['forensic'] = 'A+'
+    else:
+        psych_grades['forensic'] = 'F'
