@@ -2,7 +2,7 @@ import sys, time
 from config import player
 from khic import enter_khic_north, enter_khic_east
 from riddles import ebb_computer_lab_riddles, get_riddle, tell_riddle
-from questions import business_questions, engineering_questions
+from questions import business_questions, engineering_questions, psychology_questions
 from academic_mall import enter_academic_mall, exit_academic_mall
 
 def enter_ebb_south():
@@ -55,6 +55,19 @@ def exit_ebb_west():
         exit_academic_mall()
     else:
         exit_ebb_west()
+
+def ebb_first_floor_north():
+    print('You are now on the first floor of EBB. Where you would like to go? Engineering Department, Upstairs, Exit EBB.')
+    choice = input('Engineering, Upstairs, or Exit > ').lower()
+
+    if('eng' in choice):
+        enter_engineering_dept()
+    elif('up' in choice):
+        ebb_second_floor_north()
+    elif('exit' in choice):
+        exit_ebb_west()
+    else:
+        enter_ebb_west()
 
 def ebb_second_floor_north():
     print('You are on the second floor\n' + 
@@ -130,6 +143,20 @@ def enter_psych_dept():
     print('You just entered the Psychology Department.\n\n' + 
         'Answer the following question to get your Psychology Degree\n\n'
     )
+    psychology_questions()
+    exit_psychology_department()
+
+def exit_psychology_department():
+    print('You are exiting the Psychology Department.\n')
+    print('Where would you like to go? Down the Hallway or Down the Stairs\n')
+    choice = input('Hallway or Downstairs').lower()
+
+    if('hall' in choice):
+        ebb_second_floor_south()
+    elif('down' in choice):
+        ebb_first_floor_north()
+    else:
+        exit_psychology_department()
 
 def enter_ebb_computer_lab():
     print('You are in the EBB Computer Lab.')
