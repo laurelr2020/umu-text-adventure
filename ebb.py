@@ -40,7 +40,6 @@ def enter_ebb_west():
     else:
         enter_ebb_west()
 
-
 def exit_ebb_west():
     print('You have exited EBB. You are now in the Academic Mall.\n' +
     'Where would you like to go? EBB, KHIC North, KHIC West or South.')
@@ -126,6 +125,11 @@ def exit_engineering_dept():
         exit_ebb_west()
     else:
         exit_engineering_dept()
+
+def enter_psych_dept():
+    print('You just entered the Psychology Department.\n\n' + 
+        'Answer the following question to get your Psychology Degree\n\n'
+    )
 
 def enter_ebb_computer_lab():
     print('You are in the EBB Computer Lab.')
