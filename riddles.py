@@ -1,4 +1,5 @@
-import random 
+import random, time
+from config import player
 
 def ebb_computer_lab_riddles():
     snack_riddle = {'riddle' : 'How do computers snack?',
@@ -19,3 +20,10 @@ def ebb_computer_lab_riddles():
 def get_riddle(riddles, max_range):
     num = random.randrange(0, max_range, 1)
     return riddles[num]
+
+def tell_riddle(riddles, riddle):
+    print('\n' + riddle['riddle'])
+    time.sleep(5)
+    print(riddle['answer'] + '\n')
+    player.computer_riddles_completed += 1
+    return

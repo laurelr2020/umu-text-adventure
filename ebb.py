@@ -1,7 +1,7 @@
 import sys, time
 from config import player
 from khic import enter_khic_north, enter_khic_east
-from riddles import ebb_computer_lab_riddles, get_riddle
+from riddles import ebb_computer_lab_riddles, get_riddle, tell_riddle
 from questions import business_questions, engineering_questions
 from academic_mall import enter_academic_mall, exit_academic_mall
 
@@ -151,13 +151,6 @@ def enter_ebb_computer_lab():
         exit_ebb_computer_lab()
     else:
         ebb_second_floor_south()
-
-def tell_riddle(riddles, riddle):
-    print('\n' + riddle['riddle'])
-    time.sleep(5)
-    print(riddle['answer'] + '\n')
-    player.computer_riddles_completed += 1
-    return
 
 def exit_ebb_computer_lab():
     print('You are in the hallway. Where would you like to go next? EBB Lounge, Downstairs, or Down the Hallway?')
