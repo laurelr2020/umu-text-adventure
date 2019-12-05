@@ -82,7 +82,15 @@ def ebb_second_floor_north():
         ebb_second_floor_south()
 
 def ebb_first_floor_south():
-    print('You are in the lobby of EBB')
+    print('You are in the lobby of EBB\nChoose where you want to go:' )
+    choice = input('Business Department or Upstairs > ')
+
+    if('bus' in choice.lower()):
+        enter_bus_dept()
+    elif('up' in choice.lower()):
+        ebb_second_floor_south()
+    else:
+        ebb_first_floor_south()
 
 def ebb_second_floor_south():
     print('You are on the second floor\n' + 
@@ -120,8 +128,7 @@ def exit_bus_dept():
 
 def enter_engineering_dept():
     print('Welcome to the Engineering Department!\n' +
-        'Answer the following questions to get your Engineering Degree:\n\n'
-    )
+        'Answer the following questions to get your Engineering Degree:\n\n')
     engineering_questions()
     exit_engineering_dept()
 
@@ -141,8 +148,7 @@ def exit_engineering_dept():
 
 def enter_psych_dept():
     print('You just entered the Psychology Department.\n\n' + 
-        'Answer the following question to get your Psychology Degree\n\n'
-    )
+        'Answer the following question to get your Psychology Degree\n\n')
     psychology_questions()
     exit_psychology_department()
 
