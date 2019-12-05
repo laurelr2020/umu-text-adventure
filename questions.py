@@ -146,7 +146,7 @@ def psychology_questions():
         '    D) the psychological result of perception and reasoning'
     )
     
-    cognitive_correct_answer = 'A'
+    cognitive_correct_answer = 'a'
     cognitive_answer = input('Your answer > ').replace(')', '')
 
     if(cognitive_answer.lower() == cognitive_correct_answer):
@@ -161,7 +161,7 @@ def psychology_questions():
         '    D) an approach to psychology that emphasizes observable measurable behavior'
     )
 
-    behavioral_correct_answer = 'D'
+    behavioral_correct_answer = 'd'
     behavioral_answer = input('Your answer > ').replace(')', '')
     
     if(behavioral_answer.lower() == behavioral_correct_answer):
@@ -176,7 +176,7 @@ def psychology_questions():
         '    D) the branch of psychology that studies persons and their relationships with others and with groups and with society as a whole'
     )
 
-    forensic_correct_answer = 'B'
+    forensic_correct_answer = 'b'
     forensic_answer = input('Your answer > ').replace(')', '')
     
     if(forensic_answer.lower() == forensic_correct_answer):
