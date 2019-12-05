@@ -3,7 +3,7 @@ from config import player
 from khic import enter_khic_north, enter_khic_east
 from riddles import ebb_computer_lab_riddles, get_riddle, tell_riddle
 from questions import business_questions, engineering_questions, psychology_questions
-from academic_mall import enter_academic_mall, exit_academic_mall
+from academic_mall import enter_academic_mall_from_ebb_south, enter_academic_mall_south
 
 def enter_ebb_south():
     print('Welcome to EBB! \nChoose where you want to go:' )
@@ -23,7 +23,7 @@ def exit_ebb_south():
     if(choice == 'ebb'):
         enter_ebb_south()
     elif('acad' in choice):
-        enter_academic_mall()
+        enter_academic_mall_from_ebb_south()
     else:
         exit_ebb_south()
 
@@ -52,7 +52,7 @@ def exit_ebb_west():
     elif('west' in choice):
         enter_khic_east()
     elif('south' in choice):
-        exit_academic_mall()
+        enter_academic_mall_south()
     else:
         exit_ebb_west()
 
