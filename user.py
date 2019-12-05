@@ -40,7 +40,7 @@ class User():
         self._engineering_grades = grades_dict
 
     @property
-    def engineering_grades(self):
+    def psychology_grades(self):
         '''Grades received on psychology questions in EBB'''
         return self._psychology_grades
 
