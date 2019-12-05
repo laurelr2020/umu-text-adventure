@@ -1,6 +1,5 @@
 import sys
 from config import player
-from ebb import enter_ebb_south
 from academic_mall import enter_campus
 
 def campus_intro():
