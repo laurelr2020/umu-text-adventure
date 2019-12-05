@@ -1,16 +1,5 @@
-from ebb import enter_ebb_south, enter_ebb_west
+from ebb import enter_ebb_west
 from khic import enter_khic_north, enter_khic_east
-
-def enter_campus():
-    print('You are coming into the Academic Mall on campus. Where do you want to go: EBB or Continue North?' )
-    choice = input('EBB or North > ')
-    
-    if(choice.lower() == 'ebb'):
-        enter_ebb_south()
-    elif(choice.lower() == 'north'):
-        enter_academic_mall()
-    else:
-        enter_campus()
 
 def enter_academic_mall():
     print('This is the Academic Mall. ' +
