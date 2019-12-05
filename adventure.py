@@ -13,7 +13,6 @@ def enter_campus():
     else:
         enter_campus()
 
-
 def campus_intro():
     print("\nWell, that's not a problem. Let me tell you about this place." +
             " We use a lot of acronyms here at Mount Union so let me break it down for you.")
