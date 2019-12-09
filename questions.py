@@ -154,6 +154,8 @@ def psychology_questions():
     else:
         psych_grades['cognitive'] = 'F'
 
+    print('Grade: ' + psych_grades['cognitive'])
+
     print('Behavioral Psychology: What is behaviourism\n' + 
         '    A) the aggregate of the responses made by an organism\n' +
         '    B) the interrelation of conscious and unconscious processes and emotions that determine personality and motivation\n' +
@@ -168,6 +170,8 @@ def psychology_questions():
         psych_grades['behavioral'] = 'A+'
     else:
         psych_grades['behavioral'] = 'F'
+
+    print('Grade: ' + psych_grades['behavioral'])
 
     print('Forensic Psychology: What is forensic psychology\n' + 
         '    A) the branch of psychology concerned with abnormal behavior\n' +
@@ -184,4 +188,64 @@ def psychology_questions():
     else:
         psych_grades['forensic'] = 'F'
 
+    print('Grade: ' + psych_grades['forensic'])
+
     player.psych_grades = psych_grades
+
+def foreign_language_questions():
+    lang_grades = {
+        'japanese' : '',
+        'french' : '',
+        'spainish' : ''
+    }
+
+    print('Japanese: Japan is connected to South Korea.\n' + 
+        'True \n' + 
+        'False'
+    )
+
+    japan_correct_answer = 'false'
+    japan_answer = input('Your answser > ')
+
+    if(japan_answer.lower() == japan_correct_answer):
+        lang_grades['japanese'] = 'A+'
+    else:
+        lang_grades['japanese'] = 'F'
+
+    print('Grade: ' + lang_grades['japanese'])
+
+    print('French: When was the country of France founded?\n' +
+        'A) August 18, 1856\n' + 
+        'B) July 4, 1776\n' + 
+        'C) September 22, 1792\n' + 
+        'D) April 1, 2020\n'    
+    )
+
+    french_correct_answer = 'C'
+    french_answer = input('Your answer > ').replace(')', '')
+
+    if(french_answer.lower() == french_correct_answer):
+        lang_grades['french'] = 'A+'
+    else:
+        lang_grades['french'] = 'F'
+
+    print('Grade: ' + lang_grades['french'])
+
+    print('Spanish: Which country does not speak Spanish?\n' +
+        'A) Spain\n' + 
+        'B) Brazil\n' + 
+        'C) Uruguay\n' + 
+        'D) Chile\n'
+    )
+
+    spanish_correct_answer = 'b'
+    spanish_answer = input('Your answer > ').replace(')', '')
+
+    if(spanish_answer.lower() == spanish_correct_answer):
+        lang_grades['spanish'] = 'A+'
+    else:
+        lang_grades['spanish'] = 'F'
+
+    print('Grade: ' + lang_grades['spanish'])
+
+    player.foreign_language_grades = lang_grades

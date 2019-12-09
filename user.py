@@ -48,6 +48,14 @@ class User():
     def psychology_grades(self, grades_dict):
         self._psychology_grades = grades_dict
 
+    @property
+    def foreign_language_grades(self):
+        return self._foreign_language_grades
+
+    @foreign_language_grades.setter
+    def foreign_language_grades(self, grades_dict):
+        self._foreign_language_grades = grades_dict
+
     # @property
     # def computer_riddles_completed(self):
     #     '''Number of riddles completed in the EBB computer lab'''
