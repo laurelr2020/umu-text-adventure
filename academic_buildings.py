@@ -427,13 +427,28 @@ def enter_twenty_four_hour_area():
         exit_khic_east()
 
 def enter_khic_second_floor():
-    print('Welcome to the second floor of KHIC. Where would you like to go: Classrooms or Math Department?')
-    choice = input('Classrooms or Math Department').lower()
+    print('Welcome to the second floor of KHIC. Where would you like to go: Classrooms, Math Department, or Upstairs?')
+    choice = input('Classrooms, Math Department, or Upstairs').lower()
 
     if('class' in choice):
         enter_classrooms()
     elif('math' in choice):
         enter_math_dept()
+    elif('up' in choice):
+        enter_khic_third_floor()
+    else: 
+        enter_khic_second_floor()
+
+def enter_khic_second_floor_from_third_floor():
+    print('Welcome to the second floor of KHIC. Where would you like to go: Classrooms, Math Department, or Downstairs?')
+    choice = input('Classrooms, Math Department or Downstairs').lower()
+
+    if('class' in choice):
+        enter_classrooms()
+    elif('math' in choice):
+        enter_math_dept()
+    elif('down' in choice):
+        enter_khic_lobby_from_second_floor()
     else: 
         enter_khic_second_floor()
 
@@ -478,6 +493,16 @@ def exit_math_dept():
         enter_khic_lobby_from_second_floor()
     else:
         exit_math_dept()
+
+def enter_khic_third_floor():
+    print('Welcome to the third floor. It is quite a hike to get all the way up here but look at the view of campus\n')
+    time.sleep(2)
+    print('there are study rooms, study booths, and study tables. Lots of studying goes on in these parts.')
+    time.sleep(2)
+    print('Also, there are some books you books that you can check out at the circulation desk.')
+    time.sleep(2)
+    print('We shall leave the studious students to their studies.')
+    enter_khic_second_floor_from_third_floor()
 
 #
 #End KHIC
