@@ -284,7 +284,7 @@ def computer_science_questions():
         '    D) 8 \n'    
     )
 
-    bit_correct_answer = 'c'
+    bit_correct_answer = 'd'
     bit_answer = input('Your answer > ').replace(')', '')
 
     if(bit_answer.lower() == bit_correct_answer):
