@@ -3,7 +3,7 @@ from config import player
 from khic import enter_khic_north, enter_khic_east
 from riddles import ebb_computer_lab_riddles, get_riddle, tell_riddle
 from questions import business_questions, engineering_questions, psychology_questions
-from academic_mall import enter_academic_mall, exit_academic_mall
+from academic_mall import exit_academic_mall
 
 def enter_ebb_south():
     print('Welcome to EBB! \nChoose where you want to go:' )
@@ -23,7 +23,7 @@ def exit_ebb_south():
     if(choice == 'ebb'):
         enter_ebb_south()
     elif('acad' in choice):
-        enter_academic_mall()
+        enter_academic_mall_from_ebb_south()
     else:
         exit_ebb_south()
 
@@ -52,7 +52,7 @@ def exit_ebb_west():
     elif('west' in choice):
         enter_khic_east()
     elif('south' in choice):
-        exit_academic_mall()
+        enter_academic_mall_south()
     else:
         exit_ebb_west()
 
@@ -221,3 +221,48 @@ def exit_ebb_lounge():
         ebb_first_floor_south()
     else:
         exit_ebb_lounge()
+
+def enter_academic_mall_north():
+    print('This is the Academic Mall. ' +
+        'To the left, you will see EBB. ' + 
+        'To the right, you will see the old part of KHIC ' +
+        'and straight ahead you see the new part of KHIC.')
+    print('Where would you like to go? EBB or Old KHIC or New KHIC?')
+    choice = input('EBB or Old KHIC or New KHIC > ').lower()
+
+    if('ebb' in choice):
+        enter_ebb_west()
+    elif('old' in choice):
+        enter_khic_east()
+    elif('new' in choice):
+        enter_khic_north()
+    else:
+        enter_academic_mall_north()
+
+def enter_academic_mall_from_ebb_south():
+    print('You are in the Academic Mall. ' +
+        'To the left, you will see EBB. ' + 
+        'To the right, you will see the old part of KHIC ' +
+        'and straight ahead you see the new part of KHIC.')
+    print('Where would you like to go? EBB or Old KHIC or New KHIC?')
+    choice = input('EBB or Old KHIC or New KHIC > ').lower()
+
+    if('ebb' in choice):
+        enter_ebb_west()
+    elif('old' in choice):
+        enter_khic_east()
+    elif('new' in choice):
+        enter_khic_north()
+    else:
+        enter_academic_mall_from_ebb_south()
+
+def enter_academic_mall_south():
+    print('You are in the Academic Mall. Where would you like to go? EBB or exit campus?')
+    choice = input('EBB or Exit > ').lower()
+
+    if('ebb' in choice):
+        enter_ebb_south()
+    elif('exit' in choice):
+        exit_academic_mall()
+    else:
+        enter_academic_mall_south()

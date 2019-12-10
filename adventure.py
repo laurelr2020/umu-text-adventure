@@ -1,19 +1,17 @@
 import sys
+from ebb import enter_ebb_south, enter_academic_mall_north
 from config import player
-from ebb import enter_ebb_south
-from academic_mall import enter_academic_mall
 
 def enter_campus():
-    print("You are coming into the Academic Mall on campus. Choose where you want to go:" )
-    choice = input("EBB or North > ")
+    print('You are coming into the Academic Mall on campus. Where do you want to go: EBB or Continue North?' )
+    choice = input('EBB or North > ')
     
-    if(choice.lower() == "ebb"):
+    if(choice.lower() == 'ebb'):
         enter_ebb_south()
-    elif(choice.lower() == "north"):
-        enter_academic_mall()
+    elif(choice.lower() == 'north'):
+        enter_academic_mall_north()
     else:
-        print("You didn't enter a valid option. Bye, Bye.")
-        sys.exit()
+        enter_campus()
 
 def campus_intro():
     print("\nWell, that's not a problem. Let me tell you about this place." +
