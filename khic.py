@@ -1,5 +1,6 @@
 #from ebb import enter_ebb_west
 from questions import foreign_language_questions, computer_science_questions
+
 def enter_khic_north():
     print('Welcome to KHIC! Would you like to go to the Foreign Language Department or the Circulation Desk?')
     choice = input('Language or Circulation > ').lower()
