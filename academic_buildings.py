@@ -126,18 +126,6 @@ def ebb_first_floor_north():
     else:
         enter_ebb_west()
 
-def ebb_second_floor_north():
-    print('You are on the second floor\n' + 
-    'Where would you like to go? Down the Hallway or Downstairs?')
-    choice = input('Hallway or Downstairs > ').lower()
-
-    if('hall' in choice):
-        ebb_second_floor_south()
-    elif('down' in choice):
-        ebb_first_floor_south()
-    else:
-        ebb_second_floor_south()
-
 def ebb_first_floor_south():
     print('You are in the lobby of EBB\nChoose where you want to go:' )
     choice = input('Business Department or Upstairs > ')
@@ -148,22 +136,6 @@ def ebb_first_floor_south():
         ebb_second_floor_south()
     else:
         ebb_first_floor_south()
-
-def ebb_second_floor_south():
-    print('You are on the second floor\n' + 
-    'Where would you like to go? EBB Lounge, Computer Lab, Down the Hallway, or Downstairs?')
-    choice = input('Lounge, Lab, Hallway or Downstairs > ').lower()
-
-    if('lounge' in choice):
-        enter_ebb_lounge()
-    elif('lab' in choice):
-        enter_ebb_computer_lab()
-    elif('hall' in choice):
-        ebb_second_floor_south()
-    elif('down' in choice):
-        ebb_first_floor_south()
-    else:
-        ebb_second_floor_south()
 
 def enter_bus_dept():
     print('Welcome to the Business Department!\n' +
@@ -203,6 +175,35 @@ def exit_engineering_dept():
     else:
         exit_engineering_dept()
 
+def ebb_second_floor_north():
+    print('You are on the second floor\n' + 
+    'Where would you like to go? Psychology Department, Down the Hallway or Downstairs?')
+    choice = input('Psychology Department, Hallway or Downstairs > ').lower()
+    if('psych' in choice):
+        enter_psych_dept()
+    elif('hall' in choice):
+        ebb_second_floor_south()
+    elif('down' in choice):
+        ebb_first_floor_south()
+    else:
+        ebb_second_floor_south()
+
+def ebb_second_floor_south():
+    print('You are on the second floor\n' + 
+    'Where would you like to go? EBB Lounge, Computer Lab, Down the Hallway, or Downstairs?')
+    choice = input('Lounge, Lab, Hallway or Downstairs > ').lower()
+
+    if('lounge' in choice):
+        enter_ebb_lounge()
+    elif('lab' in choice):
+        enter_ebb_computer_lab()
+    elif('hall' in choice):
+        ebb_second_floor_north()
+    elif('down' in choice):
+        ebb_first_floor_south()
+    else:
+        ebb_second_floor_south()
+
 def enter_psych_dept():
     print('You just entered the Psychology Department.\n\n' + 
         'Answer the following question to get your Psychology Degree\n\n')
@@ -211,7 +212,7 @@ def enter_psych_dept():
 
 def exit_psychology_department():
     print('You are exiting the Psychology Department.\n')
-    print('Where would you like to go? Down the Hallway or Down the Stairs\n')
+    print('Where would you like to go? Down the Hallway or Downstairs\n')
     choice = input('Hallway or Downstairs').lower()
 
     if('hall' in choice):
