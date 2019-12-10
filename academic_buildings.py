@@ -313,9 +313,22 @@ def enter_khic_north():
     elif('circ' in choice):
         enter_circulation_desk()
     elif('up' in choice):
-        enter_classrooms()
+        enter_khic_second_floor()
     else:
         enter_khic_north()
+
+def enter_khic_lobby_from_second_floor():
+    print('You are on the first floor. Would you like to go to the Foreign Language Department, the Circulation Desk, or Upstairs?')
+    choice = input('Language, Circulation or Upstairs > ').lower()
+
+    if('lang' in choice):
+        enter_foreign_language_dept()
+    elif('circ' in choice):
+        enter_circulation_desk()
+    elif('up' in choice):
+        enter_khic_second_floor()
+    else:
+        enter_khic_lobby_from_second_floor()
 
 def exit_khic_north():
     print('You have exited New KHIC')
@@ -421,7 +434,26 @@ def enter_twenty_four_hour_area():
         exit_khic_east()
 
 def enter_khic_second_floor():
-    print('Welcome to the second floor of KHIC')
+    print('Welcome to the second floor of KHIC. Where would you like to go: Classrooms or Math Department?')
+    choice = input('Classrooms or Math Department').lower()
+
+    if('class' in choice):
+        enter_classrooms()
+    elif('math' in choice):
+        enter_math_dept()
+    else: 
+        enter_khic_second_floor()
+
+def exit_second_floor_from_classrooms():
+    print('Where would you like to go: Math Department or Downstairs?')
+    choice = input('Math Department or Downstairs > ').lower()
+
+    if('math' in choice):
+        enter_math_dept()
+    elif('down' in choice):
+        enter_khic_lobby_from_second_floor()
+    else:
+        exit_second_floor_from_classrooms()
 
 def enter_classrooms():
     print('Here are three classrooms but, \n')
@@ -434,25 +466,12 @@ def enter_classrooms():
     if('math' in choice):
         enter_math_dept()
     elif('down' in choice):
-        exit_second_floor_classrooms()
+        enter_khic_lobby_from_second_floor()
     else:
         enter_classrooms()
 
-def exit_second_floor_classrooms():
-    print('You are on the first floor. Would you like to go to the Foreign Language Department, the Circulation Desk, or Exit KHIC?')
-    choice = input('Language, Circulation or Exit > ').lower()
-
-    if('lang' in choice):
-        enter_foreign_language_dept()
-    elif('circ' in choice):
-        enter_circulation_desk()
-    elif('exit' in choice):
-        exit_khic_north()
-    else:
-        exit_second_floor_classrooms()
-
 def enter_math_dept():
-    print('YOu are in the math department.')
+    print('You are in the math department.')
 
 #
 #End KHIC
