@@ -23,7 +23,7 @@ def business_questions():
         business_degree['finance'] = 'F'
     print('Grade: ' + business_degree['finance'])
     
-    print('Mangement: What is mangagement?\n' +
+    print('Management: What is management?\n' +
         '    A) the process of designing, launching and running a new business, which is often initially a small business.\n' +
         '    B) the business process of creating relationships with and satisfying customers. \n' +
         '    C) a set of principles relating to the functions of planning, organizing, directing and controlling,\n' +
@@ -41,7 +41,7 @@ def business_questions():
         business_degree['management'] = 'F'
     print('Grade: ' + business_degree['management'])
 
-    print('Marketing: Which of the following is not inlcuded in marketing?\n' +
+    print('Marketing: Which of the following is not included in marketing?\n' +
         '    A) Advertising products\n' +
         '    B) Selling products\n' +
         '    C) Delivering products\n'
@@ -58,20 +58,6 @@ def business_questions():
     print('Grade: ' + business_degree['marketing'])
     
     player.business_grades = business_degree
-
-# @staticmethod
-# def graduation():
-#     print('Let's look at how you did.')
-#     for course, grade in business_degree.items():
-#         print(f'course: {course} grade: {grade}\n')
-
-#     earned_degree = all(value == 'A+' for value in business_degree.values())
-
-#     if(earned_degree):
-#         print('CONGRATULATIONS!!! You have earned business degree!!!!')
-#     else:
-#         print('I am sorry, but we are unable to award you a degree in business. Please feel free to take the courses again.')
-
 
 def engineering_questions():
     engineering_grades = {
@@ -154,7 +140,9 @@ def psychology_questions():
     else:
         psych_grades['cognitive'] = 'F'
 
-    print('Behavioral Psychology: What is behaviourism\n' + 
+    print('Grade: ' + psych_grades['cognitive'])
+
+    print('Behavioral Psychology: What is behaviorism\n' + 
         '    A) the aggregate of the responses made by an organism\n' +
         '    B) the interrelation of conscious and unconscious processes and emotions that determine personality and motivation\n' +
         '    C) the branch of social psychology that studies the psychodynamics of interaction in social groups\n' +
@@ -168,6 +156,8 @@ def psychology_questions():
         psych_grades['behavioral'] = 'A+'
     else:
         psych_grades['behavioral'] = 'F'
+
+    print('Grade: ' + psych_grades['behavioral'])
 
     print('Forensic Psychology: What is forensic psychology\n' + 
         '    A) the branch of psychology concerned with abnormal behavior\n' +
@@ -184,4 +174,182 @@ def psychology_questions():
     else:
         psych_grades['forensic'] = 'F'
 
+    print('Grade: ' + psych_grades['forensic'])
+
     player.psych_grades = psych_grades
+
+def foreign_language_questions():
+    lang_grades = {
+        'japanese' : '',
+        'french' : '',
+        'spanish' : ''
+    }
+
+    print('Japanese: Japan is connected to South Korea.\n' + 
+        '    True \n' + 
+        '    False'
+    )
+
+    japan_correct_answer = 'false'
+    japan_answer = input('Your answer > ')
+
+    if(japan_answer.lower() == japan_correct_answer):
+        lang_grades['japanese'] = 'A+'
+    else:
+        lang_grades['japanese'] = 'F'
+
+    print('Grade: ' + lang_grades['japanese'])
+
+    print('French: When was the country of France founded?\n' +
+        '    A) August 18, 1856\n' + 
+        '    B) July 4, 1776\n' + 
+        '    C) September 22, 1792\n' + 
+        '    D) April 1, 2020\n'    
+    )
+
+    french_correct_answer = 'c'
+    french_answer = input('Your answer > ').replace(')', '')
+
+    if(french_answer.lower() == french_correct_answer):
+        lang_grades['french'] = 'A+'
+    else:
+        lang_grades['french'] = 'F'
+
+    print('Grade: ' + lang_grades['french'])
+
+    print('Spanish: Which country does not speak Spanish?\n' +
+        '    A) Spain\n' + 
+        '    B) Brazil\n' + 
+        '    C) Uruguay\n' + 
+        '    D) Chile\n'
+    )
+
+    spanish_correct_answer = 'b'
+    spanish_answer = input('Your answer > ').replace(')', '')
+
+    if(spanish_answer.lower() == spanish_correct_answer):
+        lang_grades['spanish'] = 'A+'
+    else:
+        lang_grades['spanish'] = 'F'
+
+    print('Grade: ' + lang_grades['spanish'])
+
+    player.foreign_language_grades = lang_grades
+
+def computer_science_questions():
+    cs_grades = {
+        'languages' : '', 
+        'os' : '',
+        'bits' : ''
+    }
+
+    print('Languages: Which of the following is NOT a language?\n' + 
+        '   A) Python \n' +
+        '   B) Java\n' +
+        '   C) Go \n' +
+        '   D) B++\n'
+    )
+
+    lang_correct_answer = 'd'
+    lang_answer = input('Your answer > ').replace(')', '')
+
+    if(lang_answer.lower() == lang_correct_answer):
+        cs_grades['languages'] = 'A+'
+    else:
+        cs_grades['languages'] = 'F'
+
+    print('Grade: ' + cs_grades['languages'])
+
+    print('Operating Systems: Which of the following is NOT an operating system?\n' + 
+        '    A) Windows \n' +
+        '    B) macOS\n' +
+        '    C) doorOS\n' +
+        '    D) Linux\n'
+    )
+
+    os_correct_answer = 'c'
+    os_answer = input('Your answer > ').replace(')', '')
+
+    if(os_answer.lower() == os_correct_answer):
+        cs_grades['os'] = 'A+'
+    else:
+        cs_grades['os'] = 'F'
+
+    print('Grade: ' + cs_grades['os'])
+
+    print('Bits: How many bits are in one byte? \n' + 
+        '    A) 1 \n' +
+        '    B) 4 \n' +
+        '    C) 128 \n' +
+        '    D) 8 \n'    
+    )
+
+    bit_correct_answer = 'd'
+    bit_answer = input('Your answer > ').replace(')', '')
+
+    if(bit_answer.lower() == bit_correct_answer):
+        cs_grades['bits'] = 'A+'
+    else:
+        cs_grades['bits'] = 'F'
+
+    print('Grade: ' + cs_grades['bits'])
+
+    player.computer_science_grades = cs_grades
+
+def math_questions():
+    math_grades = {
+        'algebra' : '',
+        'stats' : '',
+        'geometry' : ''
+    }
+
+    print('Algebra: Solve for y. \n' + 
+        '   y = 3x   if x = 14\n' + 
+        '    A) 231\n' +
+        '    B) 42\n' +
+        '    C) 44\n' +
+        '    D) 43\n'
+    )
+    algebra_correct_answer = 'b'
+    algebra_answer = input('Your answer > ').replace(')', '')
+
+    if(algebra_answer.lower() == algebra_correct_answer):
+        math_grades['algebra'] = 'A+'
+    else:
+        math_grades['algebra'] = 'F'
+    
+        print('Grade: ' + math_grades['algebra'])
+
+    print('Statistics: What is the measure of the amount of variation or dispersion of a set of values?\n' +
+        '    A) variance\n' +
+        '    B) bell curve\n' +
+        '    C) average\n' +
+        '    D) standard deviation\n'
+    )
+    stats_correct_answer = 'd'
+    stats_answer = input('Your answer > ').replace(')', '')
+    
+    if(stats_answer.lower() == stats_correct_answer):
+        math_grades['stats'] = 'A+'
+    else:
+        math_grades['stats'] = 'F'
+
+    print('Grade: ' + math_grades['stats'])
+
+    print('Geometry: What is an obtuse angle?\n' + 
+        '    A) more than 90° but less than 180°\n' +
+        '    B) 180° exactly\n' +
+        '    C) less than 90° but more than 0°\n' +
+        '    D) 90° exactly\n'
+    )
+    geo_correct_answer = 'a'
+    geo_answer = input('Your answer > ').replace(')', '')
+
+    if(geo_answer.lower() == geo_correct_answer):
+        math_grades['geometry'] = 'A+'
+    else:
+        math_grades['geometry'] = 'F'
+    
+    print('Grade: ' + math_grades['stats'])
+
+    player.math_grades = math_grades
