@@ -57,8 +57,8 @@ def exit_academic_mall():
         exit_academic_mall()
 
 def exit_campus():
-    print('Thank you for visiting the University of Mount Union Campus. Please come again.')
     end_game()
+    print('Thank you for visiting the University of Mount Union Campus. Please come again.')
 #
 #End Academic Mall
 #
