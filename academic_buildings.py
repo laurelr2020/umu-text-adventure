@@ -33,24 +33,7 @@ def enter_academic_mall_north():
         enter_khic_north()
     else:
         enter_academic_mall_north()
-
-def enter_academic_mall_from_ebb_south():
-    print('You are in the Academic Mall. ' +
-        'To the left, you will see EBB. ' + 
-        'To the right, you will see the old part of KHIC ' +
-        'and straight ahead you see the new part of KHIC.')
-    print('Where would you like to go? EBB or Old KHIC or New KHIC?')
-    choice = input('EBB or Old KHIC or New KHIC > ').lower()
-
-    if('ebb' in choice):
-        enter_ebb_west()
-    elif('old' in choice):
-        enter_khic_east()
-    elif('new' in choice):
-        enter_khic_north()
-    else:
-        enter_academic_mall_from_ebb_south()
-
+        
 def enter_academic_mall_south():
     print('You are in the Academic Mall. Where would you like to go? EBB or exit campus?')
     choice = input('EBB or Exit > ').lower()
@@ -99,7 +82,7 @@ def exit_ebb_south():
     if(choice == 'ebb'):
         enter_ebb_south()
     elif('acad' in choice):
-        enter_academic_mall_from_ebb_south()
+        enter_academic_mall_north()
     else:
         exit_ebb_south()
 
@@ -406,13 +389,15 @@ def enter_circulation_desk():
         enter_circulation_desk()
 
 def exit_circulation_desk():
-    print('You have exited the Circulation Desk. Where would you like to go? Foreign Language Department or Exit KHIC?')
-    choice = input('Foreign Language or Exit').lower()
+    print('You have exited the Circulation Desk. Where would you like to go? Foreign Language Department, or 24-Hour Area or Exit KHIC?')
+    choice = input('Foreign Language, 24-Hour Area or Exit').lower()
 
     if('fore' in choice):
         enter_foreign_language_dept()
     elif('exit' in choice):
         exit_khic_north()
+    elif('24' in choice):
+        enter_twenty_four_hour_area
     else:
         exit_circulation_desk()
 
