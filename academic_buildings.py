@@ -46,13 +46,11 @@ def enter_academic_mall_south():
         enter_academic_mall_south()
 
 def exit_academic_mall():
-    print('You are exiting the Academic Mall. Where would you like to go? Enter EBB, Exit Campus, or Enter Academic Mall')
-    choice = input('EBB, Academic Mall, or Exit').lower()
+    print('You are exiting the Academic Mall. Where would you like to go? Enter EBB or Exit Campus')
+    choice = input('EBB or Exit').lower()
 
     if('ebb' in choice):
         enter_ebb_south()
-    elif('acad' in choice):
-        enter_academic_mall_north()
     elif('exit' in choice):
         end_game()
     else:
@@ -327,7 +325,17 @@ def enter_khic_lobby_from_second_floor():
         enter_khic_lobby_from_second_floor()
 
 def exit_khic_north():
-    print('You have exited New KHIC')
+    print('You are in the Academic Mall. Where would you like to go: EBB, Old KHIC, or South')
+    choice = ('EBB, KHIC, or South > ').lower()
+
+    if('ebb' in choice):
+        enter_ebb_west()
+    elif('khic' in choice):
+        enter_khic_east()
+    elif('south' in choice):
+        exit_academic_mall()
+    else:
+        exit_khic_north()
 
 def enter_khic_east():
     print('Welcome to KHIC. Would you like to go to the Computer Science Department or 24-hour area?')
