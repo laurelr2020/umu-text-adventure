@@ -58,21 +58,7 @@ def business_questions():
     print('Grade: ' + business_degree['marketing'])
     
     player.business_grades = business_degree
-
-# @staticmethod
-# def graduation():
-#     print('Let's look at how you did.')
-#     for course, grade in business_degree.items():
-#         print(f'course: {course} grade: {grade}\n')
-
-#     earned_degree = all(value == 'A+' for value in business_degree.values())
-
-#     if(earned_degree):
-#         print('CONGRATULATIONS!!! You have earned business degree!!!!')
-#     else:
-#         print('I am sorry, but we are unable to award you a degree in business. Please feel free to take the courses again.')
-
-
+    
 def engineering_questions():
     engineering_grades = {
         'civil': '',
@@ -309,3 +295,61 @@ def computer_science_questions():
     print('Grade: ' + cs_grades['bits'])
 
     player.computer_science_grades = cs_grades
+
+def math_questions():
+    math_grades = {
+        'algebra' : '',
+        'stats' : '',
+        'geometry' : ''
+    }
+
+    print('Algebra: Solve for y. \n' + 
+        '   y = 3x   if x = 14\n' + 
+        '    A) 231\n' +
+        '    B) 42\n' +
+        '    C) 44\n' +
+        '    D) 43\n'
+    )
+    algebra_correct_answer = 'b'
+    algebra_answer = input('Your answer > ').replace(')', '')
+
+    if(algebra_answer.lower() == algebra_correct_answer):
+        math_grades['algebra'] = 'A+'
+    else:
+        math_grades['algebra'] = 'F'
+    
+        print('Grade: ' + math_grades['algebra'])
+
+    print('Statistics: What is the measure of the amount of variation or dispersion of a set of values?\n' +
+        '    A) variance\n' +
+        '    B) bell curve\n' +
+        '    C) average\n' +
+        '    D) standard deviation\n'
+    )
+    stats_correct_answer = 'd'
+    stats_answer = input('Your answer > ').replace(')', '')
+    
+    if(stats_answer.lower() == stats_correct_answer):
+        math_grades['stats'] = 'A+'
+    else:
+        math_grades['stats'] = 'F'
+
+    print('Grade: ' + math_grades['stats'])
+
+    print('Geometry: What is an obtuse angle?\n' + 
+        '    A) more than 90° but less than 180°\n' +
+        '    B) 180° exactly\n' +
+        '    C) less than 90° but more than 0°\n' +
+        '    D) 90° exactly\n'
+    )
+    geo_correct_answer = 'a'
+    geo_answer = input('Your answer > ').replace(')', '')
+
+    if(geo_answer.lower() == geo_correct_answer):
+        math_grades['geometry'] = 'A+'
+    else:
+        math_grades['geometry'] = 'F'
+    
+    print('Grade: ' + math_grades['stats'])
+
+    player.math_grades = math_grades

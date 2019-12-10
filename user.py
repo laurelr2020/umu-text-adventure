@@ -63,3 +63,11 @@ class User():
     @computer_science_grades.setter
     def computer_science_grades(self, grades_dict):
         self._computer_science_grades = grades_dict
+
+    @property
+    def math_grades(self):
+        return self._math_grades
+    
+    @math_grades.setter
+    def math_grades(self, grades_dict):
+        self._math_grades = grades_dict

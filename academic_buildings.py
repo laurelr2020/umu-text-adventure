@@ -1,7 +1,7 @@
 import sys, time
 from config import player
 from riddles import ebb_computer_lab_riddles, get_riddle, tell_riddle
-from questions import business_questions, engineering_questions, psychology_questions, foreign_language_questions, computer_science_questions
+from questions import business_questions, engineering_questions, psychology_questions, foreign_language_questions, computer_science_questions, math_questions
 
 def enter_campus():
     print('You are coming into the Academic Mall on campus. Where do you want to go: EBB or Continue North?' )
@@ -471,8 +471,8 @@ def enter_classrooms():
         enter_classrooms()
 
 def enter_math_dept():
-    print('You are in the math department.')
-
+    print('Welcome to the Math Department. Answer the following questions to get your Math degree.')
+    math_questions()
 #
 #End KHIC
 #
