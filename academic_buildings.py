@@ -473,6 +473,19 @@ def enter_classrooms():
 def enter_math_dept():
     print('Welcome to the Math Department. Answer the following questions to get your Math degree.')
     math_questions()
+    exit_math_dept()
+
+def exit_math_dept():
+    print('You are exiting the Math Department. Where would you like to go: 2nd Floor Classrooms or Downstairs?')
+    choice = input('Classroom or Downstairs > ').lower()
+
+    if('class' in choice):
+        enter_classrooms()
+    elif('down' in choice):
+        enter_khic_lobby_from_second_floor()
+    else:
+        exit_math_dept()
+
 #
 #End KHIC
 #
