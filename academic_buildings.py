@@ -409,7 +409,7 @@ def enter_twenty_four_hour_area():
 
 def exit_twenty_four_hour_area():
     print('You are exiting the 24-Hour area. Where would you like to go? Circulation Desk, CS Department, or Exit KHIC?')
-    choice = input('Circulation, CS Dept or Exit').lower()
+    choice = input('Circulation, CS Dept or Exit > ').lower()
 
     if('circ' in choice):
         enter_circulation_desk()
@@ -422,7 +422,7 @@ def exit_twenty_four_hour_area():
 
 def enter_khic_second_floor():
     print('Welcome to the second floor of KHIC. Where would you like to go: Classrooms, Math Department, or Upstairs?')
-    choice = input('Classrooms, Math Department, or Upstairs').lower()
+    choice = input('Classrooms, Math Department, or Upstairs > ').lower()
 
     if('class' in choice):
         enter_classrooms()
