@@ -343,7 +343,7 @@ def exit_khic_east():
         exit_khic_east()
 
 def enter_cs_dept():
-    print('Welcome to the Computer Science Deaprtment')
+    print('Welcome to the Computer Science Department')
     computer_science_questions()
     exit_cs_dept()
 
