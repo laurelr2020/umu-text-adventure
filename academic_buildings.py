@@ -357,7 +357,7 @@ def enter_foreign_language_dept():
     exit_foreign_language_dept()
 
 def exit_foreign_language_dept():
-    print('You have exited the Circulation Desk. Where would you like to go? CirculationD Desk, Upstairs or Exit KHIC?')
+    print('You have exited the Foreign Language Department. Where would you like to go? Circulation Desk, Upstairs or Exit KHIC?')
     choice = input('Circulation, Upstairs or Exit > ').lower()
 
     if('circ' in choice):
@@ -373,38 +373,41 @@ def enter_circulation_desk():
     print('Welcome to the Circulation Desk. \n' + 
         'Here you can checkout books with the student workers, or get help with research from a librarian.')
     time.sleep(3)
-    print('Where would you like to go? Upstairs, 24-Hour Area, or KHIC Lobby?')
-    choice = input('Upstairs, 24-Hour Area, or Lobby > ').lower()
+    exit_circulation_desk()
 
-    if('up' in choice):
-        enter_khic_second_floor()
-    elif('24' in choice):
+def exit_circulation_desk():
+    print('Where would you like to go? 24-Hour Area or KHIC Lobby?')
+    choice = input('24-Hour Area or Lobby > ').lower()
+
+    if('24' in choice):
         enter_twenty_four_hour_area()
     elif('lobby' in choice):
-        exit_circ_desk()
+        exit_circ_dept_to_khic_lobby()
     else:
-        enter_circulation_desk()
+        exit_circulation_desk()
 
-def exit_circ_desk():
-    print('You have exited the Circulation Desk. Where would you like to go? Foreign Language Department, or Upstairs or Exit KHIC?')
+def exit_circ_dept_to_khic_lobby():
+    print('You have exited the Circulation Desk. Where would you like to go? Foreign Language Department, Upstairs or Exit KHIC?')
     choice = input('Foreign Language, Upstairs or Exit > ').lower()
 
     if('fore' in choice):
-        enter_foreign_language_dept()
+        enter_foreign_language_dept
     elif('exit' in choice):
         exit_khic_north()
     elif('up' in choice):
         enter_khic_second_floor()
     else:
-        exit_circ_desk()
+        exit_foreign_language_dept()
 
 def enter_twenty_four_hour_area():
     print('Welcome to the 24-Hour Area.\n' +
     'In here you have the KHIC Cafe, you can get muffins there.\n'+
     'You also have the IT Helpdesk. They will help you with all your IT needs.' + 
-    'Besides that, there are tables and study rooms that you can access 24/7.'
-    )
+    'Besides that, there are tables and study rooms that you can access 24/7.')
     time.sleep(3)
+    exit_twenty_four_hour_area()
+
+def exit_twenty_four_hour_area():
     print('You are exiting the 24-Hour area. Where would you like to go? Circulation Desk, CS Department, or Exit KHIC?')
     choice = input('Circulation, CS Dept or Exit').lower()
 
@@ -414,6 +417,8 @@ def enter_twenty_four_hour_area():
         enter_cs_dept()
     elif('exit' in choice):
         exit_khic_east()
+    else:
+        exit_twenty_four_hour_area()
 
 def enter_khic_second_floor():
     print('Welcome to the second floor of KHIC. Where would you like to go: Classrooms, Math Department, or Upstairs?')
@@ -504,7 +509,6 @@ def exit_third_floor():
         exit_second_floor()
     else: 
         exit_third_floor()
-
 #
 #End KHIC
 #
