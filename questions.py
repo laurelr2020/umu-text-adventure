@@ -200,8 +200,8 @@ def foreign_language_questions():
     }
 
     print('Japanese: Japan is connected to South Korea.\n' + 
-        'True \n' + 
-        'False'
+        '    True \n' + 
+        '    False'
     )
 
     japan_correct_answer = 'false'
@@ -215,10 +215,10 @@ def foreign_language_questions():
     print('Grade: ' + lang_grades['japanese'])
 
     print('French: When was the country of France founded?\n' +
-        'A) August 18, 1856\n' + 
-        'B) July 4, 1776\n' + 
-        'C) September 22, 1792\n' + 
-        'D) April 1, 2020\n'    
+        '    A) August 18, 1856\n' + 
+        '    B) July 4, 1776\n' + 
+        '    C) September 22, 1792\n' + 
+        '    D) April 1, 2020\n'    
     )
 
     french_correct_answer = 'C'
@@ -232,10 +232,10 @@ def foreign_language_questions():
     print('Grade: ' + lang_grades['french'])
 
     print('Spanish: Which country does not speak Spanish?\n' +
-        'A) Spain\n' + 
-        'B) Brazil\n' + 
-        'C) Uruguay\n' + 
-        'D) Chile\n'
+        '    A) Spain\n' + 
+        '    B) Brazil\n' + 
+        '    C) Uruguay\n' + 
+        '    D) Chile\n'
     )
 
     spanish_correct_answer = 'b'
@@ -258,10 +258,10 @@ def computer_science_questions():
     }
 
     print('Languages: Which of the following is NOT a language?\n' + 
-        'A) Python \n' +
-        'B) Java\n' +
-        'C) Go \n' +
-        'D) B++\n'
+        '   A) Python \n' +
+        '   B) Java\n' +
+        '   C) Go \n' +
+        '   D) B++\n'
     )
 
     lang_correct_answer = 'd'
@@ -275,10 +275,10 @@ def computer_science_questions():
     print('Grade: ' + cs_grades['languages'])
 
     print('Operating Systems: Which of the following is NOT an operating system?\n' + 
-        'A) Windows \n' +
-        'B) macOS\n' +
-        'C) doorOS\n' +
-        'D) Linux\n'
+        '    A) Windows \n' +
+        '    B) macOS\n' +
+        '    C) doorOS\n' +
+        '    D) Linux\n'
     )
 
     os_correct_answer = 'c'
@@ -292,10 +292,10 @@ def computer_science_questions():
     print('Grade: ' + cs_grades['os'])
 
     print('Bits: How many bits are in one byte? \n' + 
-        'A) 1 \n' +
-        'B) 4 \n' +
-        'C) 128 \n' +
-        'D) 8 \n'    
+        '    A) 1 \n' +
+        '    B) 4 \n' +
+        '    C) 128 \n' +
+        '    D) 8 \n'    
     )
 
     bit_correct_answer = 'c'
