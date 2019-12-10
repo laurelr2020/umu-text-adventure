@@ -249,3 +249,63 @@ def foreign_language_questions():
     print('Grade: ' + lang_grades['spanish'])
 
     player.foreign_language_grades = lang_grades
+
+def computer_science_questions():
+    cs_grades = {
+        'languages' : '', 
+        'os' : '',
+        'bits' : ''
+    }
+
+    print('Languages: Which of the following is NOT a language?\n' + 
+        'A) Python \n' +
+        'B) Java\n' +
+        'C) Go \n' +
+        'D) B++\n'
+    )
+
+    lang_correct_answer = 'd'
+    lang_answer = input('Your answer > ').replace(')', '')
+
+    if(lang_answer.lower() == lang_correct_answer):
+        cs_grades['languages'] = 'A+'
+    else:
+        cs_grades['languages'] = 'F'
+
+    print('Grade: ' + cs_grades['languages'])
+
+    print('Operating Systems: Which of the following is NOT an operating system?\n' + 
+        'A) Windows \n' +
+        'B) macOS\n' +
+        'C) doorOS\n' +
+        'D) Linux\n'
+    )
+
+    os_correct_answer = 'c'
+    os_answer = input('Your answer > ').replace(')', '')
+
+    if(os_answer.lower() == os_correct_answer):
+        cs_grades['os'] = 'A+'
+    else:
+        cs_grades['os'] = 'F'
+
+    print('Grade: ' + cs_grades['os'])
+
+    print('Bits: How many bits are in one byte? \n' + 
+        'A) 1 \n' +
+        'B) 4 \n' +
+        'C) 128 \n' +
+        'D) 8 \n'    
+    )
+
+    bit_correct_answer = 'c'
+    bit_answer = input('Your answer > ').replace(')', '')
+
+    if(bit_answer.lower() == bit_correct_answer):
+        cs_grades['bits'] = 'A+'
+    else:
+        cs_grades['bits'] = 'F'
+
+    print('Grade: ' + cs_grades['bits'])
+
+    player.computer_science_grades = cs_grades

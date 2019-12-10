@@ -56,11 +56,10 @@ class User():
     def foreign_language_grades(self, grades_dict):
         self._foreign_language_grades = grades_dict
 
-    # @property
-    # def computer_riddles_completed(self):
-    #     '''Number of riddles completed in the EBB computer lab'''
-    #     return self._computer_riddles_completed
+    @property
+    def computer_science_grades(self):
+        return self._computer_science_grades
 
-    # @computer_riddles_completed.setter
-    # def computer_riddles_completed(self):
-    #     self._computer_riddles_completed += 1
+    @computer_science_grades.setter
+    def computer_science_grades(self, grades_dict):
+        self._computer_science_grades = grades_dict
