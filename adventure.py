@@ -1,6 +1,6 @@
 import sys
-from ebb import enter_ebb_south, enter_academic_mall_north
 from config import player
+from academic_buildings import enter_ebb_south, enter_academic_mall_north
 
 def enter_campus():
     print('You are coming into the Academic Mall on campus. Where do you want to go: EBB or Continue North?' )
