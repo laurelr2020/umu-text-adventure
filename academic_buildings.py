@@ -449,7 +449,7 @@ def exit_second_floor():
 def enter_classrooms():
     print('Here are three classrooms but,')
     time.sleep(1)
-    print('\nshhhhhhhhhhhh\n\nclass is in session')
+    print('shhhhhhhhhhhh\n\nclass is in session')
     time.sleep(2)
     exit_classrooms()
 
@@ -485,10 +485,10 @@ def exit_math_dept():
         exit_math_dept()
 
 def enter_khic_third_floor():
-    print('Welcome to the third floor. It is quite a hike to get all the way up here but look at the view of campus\n')
+    print('Welcome to the third floor. It is quite a hike to get all the way up here but look at the view of campus.')
     time.sleep(2)
 
-    print('there are study rooms, study booths, and study tables. Lots of studying goes on in these parts.')
+    print('There are study rooms, study booths, and study tables. Lots of studying goes on in these parts.')
     time.sleep(2)
 
     print('Also, there are some books you books that you can check out at the circulation desk.')
@@ -498,8 +498,8 @@ def enter_khic_third_floor():
     exit_third_floor()
 
 def exit_third_floor():
-    print('Welcome to the second floor of KHIC. Where would you like to go: Classrooms, Math Department, or Downstairs?')
-    choice = input('Classrooms, Math Department or Downstairs').lower()
+    print('You are on the second floor of KHIC. Where would you like to go: Classrooms, Math Department, or Downstairs?')
+    choice = input('Classrooms, Math Department or Downstairs > ').lower()
 
     if('class' in choice):
         enter_classrooms()
