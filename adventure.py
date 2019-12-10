@@ -41,7 +41,7 @@ def rules():
         if(understands.lower() == 'yes'):
             print("Good! Let's get started!")
         else: 
-            print("I dont think this game is going to work out for you. Bye, bye.")
+            print("I don't think this game is going to work out for you. Bye, bye.")
             sys.exit()
     else:
         print("If you can't understand these simple rules, you wont be able to play the game.")

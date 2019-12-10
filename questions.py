@@ -23,7 +23,7 @@ def business_questions():
         business_degree['finance'] = 'F'
     print('Grade: ' + business_degree['finance'])
     
-    print('Mangement: What is mangagement?\n' +
+    print('Management: What is management?\n' +
         '    A) the process of designing, launching and running a new business, which is often initially a small business.\n' +
         '    B) the business process of creating relationships with and satisfying customers. \n' +
         '    C) a set of principles relating to the functions of planning, organizing, directing and controlling,\n' +
@@ -41,7 +41,7 @@ def business_questions():
         business_degree['management'] = 'F'
     print('Grade: ' + business_degree['management'])
 
-    print('Marketing: Which of the following is not inlcuded in marketing?\n' +
+    print('Marketing: Which of the following is not included in marketing?\n' +
         '    A) Advertising products\n' +
         '    B) Selling products\n' +
         '    C) Delivering products\n'
@@ -156,7 +156,7 @@ def psychology_questions():
 
     print('Grade: ' + psych_grades['cognitive'])
 
-    print('Behavioral Psychology: What is behaviourism\n' + 
+    print('Behavioral Psychology: What is behaviorism\n' + 
         '    A) the aggregate of the responses made by an organism\n' +
         '    B) the interrelation of conscious and unconscious processes and emotions that determine personality and motivation\n' +
         '    C) the branch of social psychology that studies the psychodynamics of interaction in social groups\n' +
@@ -196,7 +196,7 @@ def foreign_language_questions():
     lang_grades = {
         'japanese' : '',
         'french' : '',
-        'spainish' : ''
+        'spanish' : ''
     }
 
     print('Japanese: Japan is connected to South Korea.\n' + 
@@ -205,7 +205,7 @@ def foreign_language_questions():
     )
 
     japan_correct_answer = 'false'
-    japan_answer = input('Your answser > ')
+    japan_answer = input('Your answer > ')
 
     if(japan_answer.lower() == japan_correct_answer):
         lang_grades['japanese'] = 'A+'

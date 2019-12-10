@@ -355,6 +355,8 @@ def exit_cs_dept():
         enter_twenty_four_hour_area()
     elif('exit' in choice):
         exit_khic_east()
+    else:
+        exit_cs_dept()
 
 def enter_foreign_language_dept():
     print('Welcome to the Foreign Language Department')
