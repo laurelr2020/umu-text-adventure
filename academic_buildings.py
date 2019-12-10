@@ -79,7 +79,7 @@ def enter_ebb_south():
 
 def exit_ebb_south():
     print('You have exited EBB. Where would you like to go: Academic Mall or Exit Campus?')
-    choice = input('Academic Mall or Exit> ').lower()
+    choice = input('Academic Mall or Exit > ').lower()
 
     if('acad' in choice):
         enter_academic_mall_north()
