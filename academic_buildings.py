@@ -497,10 +497,13 @@ def exit_math_dept():
 def enter_khic_third_floor():
     print('Welcome to the third floor. It is quite a hike to get all the way up here but look at the view of campus\n')
     time.sleep(2)
+
     print('there are study rooms, study booths, and study tables. Lots of studying goes on in these parts.')
     time.sleep(2)
+
     print('Also, there are some books you books that you can check out at the circulation desk.')
     time.sleep(2)
+    
     print('We shall leave the studious students to their studies.')
     enter_khic_second_floor_from_third_floor()
 
