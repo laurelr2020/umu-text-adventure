@@ -184,7 +184,7 @@ def ebb_second_floor_north():
     elif('hall' in choice):
         ebb_second_floor_south()
     elif('down' in choice):
-        ebb_first_floor_south()
+        ebb_first_floor_north()
     else:
         ebb_second_floor_south()
 
