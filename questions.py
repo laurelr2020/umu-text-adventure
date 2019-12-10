@@ -58,7 +58,7 @@ def business_questions():
     print('Grade: ' + business_degree['marketing'])
     
     player.business_grades = business_degree
-    
+
 def engineering_questions():
     engineering_grades = {
         'civil': '',
@@ -207,7 +207,7 @@ def foreign_language_questions():
         '    D) April 1, 2020\n'    
     )
 
-    french_correct_answer = 'C'
+    french_correct_answer = 'c'
     french_answer = input('Your answer > ').replace(')', '')
 
     if(french_answer.lower() == french_correct_answer):
