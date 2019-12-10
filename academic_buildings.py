@@ -64,6 +64,16 @@ def enter_academic_mall_south():
 
 def exit_academic_mall():
     print('You are exiting the Academic Mall. Where would you like to go? Enter EBB, Exit Campus, or Enter Academic Mall')
+    choice = input('EBB, Academic Mall, or Exit').lower()
+
+    if('ebb' in choice):
+        enter_ebb_south()
+    elif('acad' in choice):
+        enter_academic_mall_north()
+    elif('exit' in choice):
+        end_game()
+    else:
+        exit_academic_mall()
 #
 #End Academic Mall
 #
@@ -328,7 +338,9 @@ def exit_khic_east():
     elif('khic' in choice):
         enter_khic_north()
     elif('exit' in choice):
-        print('exiting old khic')
+        exit_academic_mall()
+    else:
+        exit_khic_east()
 
 def enter_cs_dept():
     print('Welcome to the Computer Science Deaprtment')
@@ -395,3 +407,9 @@ def enter_khic_second_floor():
 #
 #End KHIC
 #
+
+#----------
+def end_game():
+    print('Nice Job. Thanks for playing! Have a good day!')
+    time.sleep(2)
+    sys.exit()
