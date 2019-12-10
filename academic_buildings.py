@@ -3,6 +3,17 @@ from config import player
 from riddles import ebb_computer_lab_riddles, get_riddle, tell_riddle
 from questions import business_questions, engineering_questions, psychology_questions, foreign_language_questions, computer_science_questions
 
+def enter_campus():
+    print('You are coming into the Academic Mall on campus. Where do you want to go: EBB or Continue North?' )
+    choice = input('EBB or North > ')
+    
+    if(choice.lower() == 'ebb'):
+        enter_ebb_south()
+    elif(choice.lower() == 'north'):
+        enter_academic_mall_north()
+    else:
+        enter_campus()
+
 #
 #Start Academic Mall
 #
