@@ -362,10 +362,10 @@ def exit_foreign_language_dept():
 
     if('circ' in choice):
         enter_circulation_desk()
-    elif('exit' in choice):
-        exit_khic_north()
     elif('up' in choice):
         enter_khic_second_floor()
+    elif('exit' in choice):
+        exit_khic_north()
     else:
         exit_foreign_language_dept()
 
@@ -392,10 +392,10 @@ def enter_khic_lobby_from_circ_desk():
 
     if('fore' in choice):
         enter_foreign_language_dept
-    elif('exit' in choice):
-        exit_khic_north()
     elif('up' in choice):
         enter_khic_second_floor()
+    elif('exit' in choice):
+        exit_khic_north()
     else:
         enter_khic_lobby_from_circ_desk()
 
@@ -433,18 +433,18 @@ def enter_khic_second_floor():
     else: 
         enter_khic_second_floor()
 
-def exit_second_floor():
-    print('You are on the first floor. Would you like to go to the Foreign Language Department, the Circulation Desk, or Upstairs?')
-    choice = input('Language, Circulation or Upstairs > ').lower()
+def enter_khic_lobby_from_second_floor():
+    print('You are on the first floor. Would you like to go to the Foreign Language Department, the Circulation Desk, or Exit?')
+    choice = input('Language, Circulation, or Exit > ').lower()
 
     if('lang' in choice):
         enter_foreign_language_dept()
     elif('circ' in choice):
         enter_circulation_desk()
-    elif('up' in choice):
-        enter_khic_second_floor()
+    elif('exit' in choice):
+        exit_khic_north()
     else:
-        exit_second_floor()
+        enter_khic_lobby_from_second_floor()
 
 def enter_classrooms():
     print('Here are three classrooms but,')
@@ -462,7 +462,7 @@ def exit_classrooms():
     elif('up' in choice):
         enter_khic_third_floor()
     elif('down' in choice):
-        exit_second_floor()
+        enter_khic_lobby_from_second_floor()
     else:
         exit_classrooms()
 
@@ -480,7 +480,7 @@ def exit_math_dept():
     elif('up' in choice):
         enter_khic_third_floor()
     elif('down' in choice):
-        exit_second_floor()
+        enter_khic_lobby_from_second_floor()
     else:
         exit_math_dept()
 
@@ -506,7 +506,7 @@ def exit_third_floor():
     elif('math' in choice):
         enter_math_dept()
     elif('down' in choice):
-        exit_second_floor()
+        enter_khic_lobby_from_second_floor()
     else: 
         exit_third_floor()
 #
