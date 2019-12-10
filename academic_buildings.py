@@ -300,6 +300,19 @@ def enter_khic_north():
     else:
         enter_khic_north()
 
+def enter_khic_lobby_from_circ_desk():
+    print('You have exited the Circulation Desk. Where would you like to go? Foreign Language Department, or Upstairs or Exit KHIC?')
+    choice = input('Foreign Language, Upstairs or Exit').lower()
+
+    if('fore' in choice):
+        enter_foreign_language_dept()
+    elif('exit' in choice):
+        exit_khic_north()
+    elif('up' in choice):
+        enter_khic_second_floor()
+    else:
+        enter_khic_lobby_from_circ_desk()
+
 def enter_khic_lobby_from_second_floor():
     print('You are on the first floor. Would you like to go to the Foreign Language Department, the Circulation Desk, or Upstairs?')
     choice = input('Language, Circulation or Upstairs > ').lower()
@@ -387,19 +400,6 @@ def enter_circulation_desk():
         enter_khic_lobby_from_circ_desk()
     else:
         enter_circulation_desk()
-
-def enter_khic_lobby_from_circ_desk():
-    print('You have exited the Circulation Desk. Where would you like to go? Foreign Language Department, or Upstairs or Exit KHIC?')
-    choice = input('Foreign Language, Upstairs or Exit').lower()
-
-    if('fore' in choice):
-        enter_foreign_language_dept()
-    elif('exit' in choice):
-        exit_khic_north()
-    elif('up' in choice):
-        enter_khic_second_floor()
-    else:
-        enter_khic_lobby_from_circ_desk()
 
 def enter_twenty_four_hour_area():
     print('Welcome to the 24-Hour Area.\n' +
