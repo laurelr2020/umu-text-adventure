@@ -402,7 +402,21 @@ def exit_circulation_desk():
         exit_circulation_desk()
 
 def enter_twenty_four_hour_area():
-    print('Welcome to the 24-Hour Area')
+    print('Welcome to the 24-Hour Area.\n' +
+    'In here you have the KHIC Cafe, you can get muffins there.\n'+
+    'You also have the IT Helpdesk. They will help you with all your IT needs.' + 
+    'Besides that, there are tables and study rooms that you can access 24/7.'
+    )
+    time.sleep(3)
+    print('You are exiting the 24-Hour area. Where would you like to go? Circulation Desk, CS Department, or Exit KHIC?')
+    choice = input('Circulation, CS Dept or Exit').lower()
+
+    if('circ' in choice):
+        enter_circulation_desk()
+    elif('cs' in choice):
+        enter_cs_dept()
+    elif('exit' in choice):
+        exit_khic_east()
 
 def enter_khic_second_floor():
     print('Welcome to the second floor of KHIC')
