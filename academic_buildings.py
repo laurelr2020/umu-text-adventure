@@ -47,7 +47,7 @@ def enter_academic_mall_south():
 
 def exit_academic_mall():
     print('You are exiting the Academic Mall. Where would you like to go? Enter EBB or Exit Campus')
-    choice = input('EBB or Exit').lower()
+    choice = input('EBB or Exit > ').lower()
 
     if('ebb' in choice):
         enter_ebb_south()
@@ -219,7 +219,7 @@ def enter_psych_dept():
 def exit_psychology_department():
     print('You are exiting the Psychology Department.\n')
     print('Where would you like to go? Down the Hallway or Downstairs\n')
-    choice = input('Hallway or Downstairs').lower()
+    choice = input('Hallway or Downstairs > ').lower()
 
     if('hall' in choice):
         ebb_second_floor_south()
@@ -522,6 +522,7 @@ def exit_third_floor():
 
 #----------
 def end_game():
+    player.printAllGrades()
     print('Nice Job. Thanks for playing! Have a good day!')
     time.sleep(2)
     sys.exit()
