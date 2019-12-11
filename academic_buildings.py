@@ -52,9 +52,13 @@ def exit_academic_mall():
     if('ebb' in choice):
         enter_ebb_south()
     elif('exit' in choice):
-        end_game()
+        exit_campus()
     else:
         exit_academic_mall()
+
+def exit_campus():
+    end_game()
+    print('Thank you for visiting the University of Mount Union Campus. Please come again.')
 #
 #End Academic Mall
 #
@@ -63,7 +67,7 @@ def exit_academic_mall():
 #Start EBB
 #
 def enter_ebb_south():
-    print('Welcome to EBB! \nChoose where you want to go:' )
+    print('Welcome to EBB! Where do you wan to go: Business Department or Upstairs' )
     choice = input('Business Department or Upstairs > ')
 
     if('bus' in choice.lower()):
@@ -74,13 +78,13 @@ def enter_ebb_south():
         enter_ebb_south()
 
 def exit_ebb_south():
-    print('You have exited EBB. Where would you like to go: EBB or Academic Mall?')
-    choice = input('EBB or Academic Mall > ').lower()
+    print('You have exited EBB. Where would you like to go: Academic Mall or Exit Campus?')
+    choice = input('Academic Mall or Exit > ').lower()
 
-    if(choice == 'ebb'):
-        enter_ebb_south()
-    elif('acad' in choice):
+    if('acad' in choice):
         enter_academic_mall_north()
+    elif('exit' in choice):
+        exit_campus()
     else:
         exit_ebb_south()
 
@@ -127,13 +131,15 @@ def ebb_first_floor_north():
         enter_ebb_west()
 
 def ebb_first_floor_south():
-    print('You are in the lobby of EBB\nChoose where you want to go:' )
-    choice = input('Business Department or Upstairs > ')
+    print('You are in the lobby of EBB. Where do you want to go: Business Department, Upstairs, or Exit EBB' )
+    choice = input('Business Department, Upstairs, Exit > ')
 
     if('bus' in choice.lower()):
         enter_bus_dept()
     elif('up' in choice.lower()):
         ebb_second_floor_south()
+    elif('exit' in choice):
+        exit_ebb_south()
     else:
         ebb_first_floor_south()
 
