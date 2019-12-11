@@ -56,7 +56,7 @@ def business_questions():
     else:
         business_degree['marketing'] = 'F'
     print('Grade: ' + business_degree['marketing'])
-    
+
     player.business_grades = business_degree
 
 def engineering_questions():
@@ -176,7 +176,7 @@ def psychology_questions():
 
     print('Grade: ' + psych_grades['forensic'])
 
-    player.psych_grades = psych_grades
+    player.psychology_grades = psych_grades
 
 def foreign_language_questions():
     lang_grades = {

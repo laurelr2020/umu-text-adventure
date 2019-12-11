@@ -1,7 +1,6 @@
-
 class User():
     def __init__(self):
-        self.computer_riddles_completed = 0;
+        self.all_grades = {}
 
     @property
     def name(self):
@@ -29,6 +28,7 @@ class User():
     @business_grades.setter
     def business_grades(self, grades_dict):
         self._business_grades = grades_dict
+        self.all_grades.update(self._business_grades)
 
     @property
     def engineering_grades(self):
@@ -38,6 +38,7 @@ class User():
     @engineering_grades.setter
     def engineering_grades(self, grades_dict):
         self._engineering_grades = grades_dict
+        self.all_grades.update(self._engineering_grades)
 
     @property
     def psychology_grades(self):
@@ -47,6 +48,7 @@ class User():
     @psychology_grades.setter
     def psychology_grades(self, grades_dict):
         self._psychology_grades = grades_dict
+        self.all_grades.update(self._psychology_grades)
 
     @property
     def foreign_language_grades(self):
@@ -55,6 +57,7 @@ class User():
     @foreign_language_grades.setter
     def foreign_language_grades(self, grades_dict):
         self._foreign_language_grades = grades_dict
+        self.all_grades.update(self._foreign_language_grades)
 
     @property
     def computer_science_grades(self):
@@ -63,6 +66,7 @@ class User():
     @computer_science_grades.setter
     def computer_science_grades(self, grades_dict):
         self._computer_science_grades = grades_dict
+        self.all_grades.update(self._computer_science_grades)
 
     @property
     def math_grades(self):
@@ -71,3 +75,7 @@ class User():
     @math_grades.setter
     def math_grades(self, grades_dict):
         self._math_grades = grades_dict
+        self.all_grades.update(self._math_grades)
+
+    def printAllGrades(self):
+        print(self.all_grades)
