@@ -1,6 +1,7 @@
 class User():
     def __init__(self):
         self.all_grades = {}
+        self.computer_riddles_completed = 0
 
     @property
     def name(self):
