@@ -318,7 +318,7 @@ def math_questions():
     else:
         math_grades['algebra'] = 'F'
     
-        print('Grade: ' + math_grades['algebra'])
+    print('Grade: ' + math_grades['algebra'])
 
     print('Statistics: What is the measure of the amount of variation or dispersion of a set of values?\n' +
         '    A) variance\n' +
